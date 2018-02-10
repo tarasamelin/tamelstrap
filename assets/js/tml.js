@@ -19,7 +19,7 @@ $( window ).scroll(function() {
     var header_h = $( 'header.site-header' ).height();
     var scr_h = $(window).height();
     var doc_h = $(document).height();
-    if ( $( this ).scrollTop() >= on_scroll_h && doc_h > ( scr_h + header_h + on_scroll_h + 42) ) {
+    if ( $( this ).scrollTop() >= on_scroll_h && doc_h > ( scr_h + header_h + on_scroll_h + 100) ) {
         $( 'header.site-header' ).addClass( 'fixed-top' );
     }
     else {

@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <form class="woocommerce-ordering d-flex justify-content-md-end" method="get">
-	<select name="orderby" class="justify-content-end custom-select rounded-0 pt-0 pb-0 mb-3 orderby">
+	<select name="orderby" class="d-flex justify-content-end custom-select rounded-0 pt-0 pb-0 mb-3 orderby">
 		<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
 			<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
 		<?php endforeach; ?>
