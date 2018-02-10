@@ -1,0 +1,88 @@
+/* Main CSS Styles */
+
+* {
+    font-weight: normal!important;
+}
+
+.button,
+.btn,
+button, a {
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #3C5363;
+}
+
+.dropdown-menu {
+/*    min-width: 10rem;*/
+    margin: 0rem 0 0;
+}
+
+.popover,
+body {
+    font-family: 'FuturaPT-Medium';
+    font-weight: normal;
+    font-style: normal;
+    color: #3C5363;
+}
+
+.navbar-light .navbar-brand,
+body nav a,
+body nav a:hover,
+body a,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+    font-family: 'FuturaPT-Medium';
+    font-weight: normal;
+    font-style: normal;
+    color: #698090;
+}
+
+.woocommerce-product-gallery__trigger {
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+    font-size: 2rem;
+    z-index: 9;
+    text-indent: -9999px;
+    border-radius: 0;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    background: url('../../../../plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.png') 0 0 no-repeat;
+    background-size: 264px 88px;
+    background-position: -88px 0;
+    background-color: rgba(0,0,0,0.15);
+    width: 44px;
+    height: 44px;
+}
+
+input.input-text.qty.text {
+    max-width: 5rem;
+    padding-right: 0.2rem;
+}
+
+.woocommerce-cart-form__cart-item .attachment-shop_thumbnail {
+    max-width: 4rem;
+    height: auto;
+}
+
+
+a.button+a.added_to_cart.wc-forward {
+    text-align: center;
+    display: block;
+}
+
+ol.commentlist li.comment {
+    list-style-type: none;
+}
+
+ol.comment-list li.comment {
+    list-style-type: none;
+}
+

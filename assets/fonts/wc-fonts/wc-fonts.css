@@ -1,0 +1,22 @@
+
+@font-face {
+    font-family: 'star';
+    src: url('star.eot');
+    src: url('star.eot?#iefix') format('embedded-opentype'),
+         url('star.woff') format('woff'),
+         url('star.ttf') format('truetype'),
+         url('star.svg#star') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WooCommerce';
+    src: url('WooCommerce.eot');
+    src: url('WooCommerce.eot?#iefix') format('embedded-opentype'),
+         url('WooCommerce.woff') format('woff'),
+         url('WooCommerce.ttf') format('truetype'),
+         url('WooCommerce.svg#WooCommerce') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
