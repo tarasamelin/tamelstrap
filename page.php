@@ -1,6 +1,6 @@
 <?php
 /**
- * The index template
+ * Basic page template
  */
 
 get_header(); ?>
@@ -22,11 +22,3 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php get_footer();
-
-
-
-
-
-
-
-
