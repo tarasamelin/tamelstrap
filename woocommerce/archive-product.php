@@ -39,7 +39,7 @@ get_header( 'shop' ); ?>
 				do_action( 'woocommerce_before_shop_loop' );
 			?>
 			<?php woocommerce_product_loop_start(); ?>
-				<?php woocommerce_product_subcategories(); ?>
+				<?php //woocommerce_product_subcategories(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php
 						/** woocommerce_shop_loop hook.
