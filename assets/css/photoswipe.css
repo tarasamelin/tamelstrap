@@ -1,0 +1,32 @@
+/*
+.tml-photoswipe-gallery {
+  width: 100%;
+  float: left;
+}
+.tml-photoswipe-gallery img {
+  width: 100%;
+  height: auto;
+}
+.tml-photoswipe-gallery figure {
+  display: block;
+  float: left;
+  margin: 0 5px 5px 0;
+  width: 150px;
+}
+.tml-photoswipe-gallery figcaption {
+  display: none;
+}*/
+
+/*
+.tml-photoswipe-gallery figure {
+  display: block;
+  float: left;
+  margin: 0;
+  width: 200px;
+}
+*/
+
+.tml-photoswipe-gallery figcaption {
+    color: #FFFFFF;
+    display: none;
+}
