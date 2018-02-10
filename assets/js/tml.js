@@ -14,23 +14,22 @@ $( 'header .navbar .dropdown > a' ).click(function(){
 });
 
 // Sticky nav menu
-//$( window ).scroll(function() {
-//    if ( $( this ).scrollTop() >= 300) {
-//        $( 'header.site-header' ).addClass( 'fixed-top' );
-//    }
-//    else {
-//        $( 'header.site-header' ).removeClass( 'fixed-top' );
-//    }
-//});
+$( window ).scroll(function() {
+    var on_scroll_h = 200;
+    var header_h = $( 'header.site-header' ).height();
+    var scr_h = $(window).height();
+    var doc_h = $(document).height();
+    if ( $( this ).scrollTop() >= on_scroll_h && doc_h > ( scr_h + header_h + on_scroll_h + 42) ) {
+        $( 'header.site-header' ).addClass( 'fixed-top' );
+    }
+    else {
+        $( 'header.site-header' ).removeClass( 'fixed-top' );
+    }
+//    alert ( header_h );
+});
 
 // Add some classes to html elements by jquery
-$( 'ol.commentlist' ).addClass( 'pl-1' );
-$( 'ol.comment-list' ).addClass( 'pl-1' );
-$( 'ol.flex-control-nav.flex-control-thumbs' ).addClass( 'row pl-3 pr-3 mt-0' );
-$( 'ol.flex-control-nav.flex-control-thumbs li' ).addClass( 'col-3 pl-0 pr-0' ).css( 'listStyleType', 'none' );
-$( 'ol.flex-control-nav.flex-control-thumbs li img' ).addClass( 'img-fluid' );
-$( 'img.attachment-shop_single.size-shop_single' ).addClass( 'img-fluid' );
-$( 'table.variations.table select' ).addClass( 'custom-select rounded-0 pt-0 pb-0' );
+//$( 'table.variations.table select' ).addClass( 'custom-select' );
 
 
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * Display single product reviews (comments)
- * v3.2.0
+ * @version     3.2.0
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly

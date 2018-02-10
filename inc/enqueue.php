@@ -21,17 +21,17 @@ wp_register_script( 'bootstrap-4-js', get_template_directory_uri().'/assets/js/b
 wp_enqueue_script( 'bootstrap-4-js' );
 
 //    if ( has_post_format( 'gallery' ) ) {
-        wp_register_script( 'lightbox2', get_template_directory_uri().'/assets/js/lightbox.min.js', array('jquery-3.2.1'), NULL, true );
-        wp_enqueue_script( 'lightbox2');
-        wp_register_script( 'lightbox-option', get_template_directory_uri().'/assets/js/lightbox-option.js', array('lightbox2'), NULL, true );
-        wp_enqueue_script( 'lightbox-option');
+//        wp_register_script( 'lightbox2', get_template_directory_uri().'/assets/js/lightbox.min.js', array('jquery-3.2.1'), NULL, true );
+//        wp_enqueue_script( 'lightbox2');
+//        wp_register_script( 'lightbox-option', get_template_directory_uri().'/assets/js/lightbox-option.js', array('lightbox2'), NULL, true );
+//        wp_enqueue_script( 'lightbox-option');
 
-//        wp_register_script( 'photoswipe', get_template_directory_uri().'/assets/js/photoswipe.min.js', array('jquery-3.2.1'), '4.1.1', true );
-//        wp_enqueue_script( 'photoswipe');
-//        wp_register_script( 'photoswipe-ui-default', get_template_directory_uri().'/assets/js/photoswipe-ui-default.min.js', array('photoswipe'), '4.1.1', true );
-//        wp_enqueue_script( 'photoswipe-ui-default');
-//        wp_register_script( 'photoswipe-init', get_template_directory_uri().'/assets/js/photoswipe-init.js', array('photoswipe-ui-default'), '4.1.1', true );
-//        wp_enqueue_script( 'photoswipe-init');
+        wp_register_script( 'photoswipe', get_template_directory_uri().'/assets/js/photoswipe.min.js', array('jquery-3.2.1'), '4.1.1', true );
+        wp_enqueue_script( 'photoswipe');
+        wp_register_script( 'photoswipe-ui-default', get_template_directory_uri().'/assets/js/photoswipe-ui-default.min.js', array('photoswipe'), '4.1.1', true );
+        wp_enqueue_script( 'photoswipe-ui-default');
+        wp_register_script( 'photoswipe-init', get_template_directory_uri().'/assets/js/photoswipe-init.js', array('photoswipe-ui-default'), '4.1.1', true );
+        wp_enqueue_script( 'photoswipe-init');
     
         wp_register_script( 'masonry', get_template_directory_uri().'/assets/js/masonry.pkgd.min.js', array('jquery-3.2.1'), '4.2.0', true );
         wp_enqueue_script('masonry');
@@ -44,7 +44,6 @@ wp_register_script( 'tml', get_template_directory_uri().'/assets/js/tml.js', arr
 wp_enqueue_script( 'tml');
     
     
-    
 /**
 * -------- STYLES --------
 */
@@ -54,6 +53,7 @@ wp_enqueue_style( 'bootstrap-4-css', get_template_directory_uri().'/assets/css/b
 wp_enqueue_style( 'main', get_template_directory_uri().'/assets/css/main.css', array('bootstrap-4-css'), NULL, false );
 wp_enqueue_style( 'fonts', get_template_directory_uri().'/assets/fonts/fonts.css', array('main'), NULL, false );
 wp_enqueue_style( 'wc-star-rating-css', get_template_directory_uri().'/assets/css/wc-star-rating.css', array('fonts'), NULL, false );
+wp_enqueue_style( 'custom-select-css', get_template_directory_uri().'/assets/css/custom-select.css', array('main'), NULL, false );
 
 //    if ( has_post_format( 'gallery' ) ) {
         wp_enqueue_style( 'lightbox2-css', get_template_directory_uri().'/assets/css/lightbox.min.css', array('bootstrap-4-css'), NULL, false );

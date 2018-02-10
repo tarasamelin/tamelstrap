@@ -5,6 +5,9 @@
  * ========================
  */
 
+//$path_wp_admin_translates = home_url( '/' ).'wp-content/languages/admin-'. get_locale() . '.mo';
+//load_theme_textdomain( $wp_admin, $path_wp_admin_translates );
+
 function tml_add_theme_support() {
     add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );

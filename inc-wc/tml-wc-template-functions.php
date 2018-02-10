@@ -44,14 +44,18 @@ function woocommerce_get_product_thumbnail( $size = 'shop_catalog', $deprecated1
  * Show the product title in the product loop. By default this is an H2.
  */
 function woocommerce_template_loop_product_title() {
-    echo '<h2 class="woocommerce-loop-product__title text-center h5 mb-1 mt-1">' . get_the_title() . '</h2>';
+    echo '<h2 class="text-center h5 mb-1 mt-1 woocommerce-loop-product__title">' . get_the_title() . '</h2>';
 }
 
 /**
  * Insert the opening anchor tag for products in the loop.
  */
 function tml_woocommerce_template_loop_product_link_open() {
-	echo '<a href="' . get_the_permalink() . '" class="woocommerce-LoopProduct-link woocommerce-loop-product__link text-secondary d-block">';
+    global $product;
+
+	$link = apply_filters( 'woocommerce_loop_product_link', get_the_permalink(), $product );
+    
+	echo '<a href="' . esc_url( $link ) . '" class="text-secondary d-block woocommerce-LoopProduct-link woocommerce-loop-product__link">';
 }
 
 /**
@@ -79,7 +83,7 @@ function tml_woocommerce_before_shop_loop_col_close() {
 function woocommerce_breadcrumb( $args = array() ) {
     $args = wp_parse_args( $args, apply_filters( 'woocommerce_breadcrumb_defaults', array(
         'delimiter'   => '&nbsp;&#47;&nbsp;',
-        'wrap_before' => '<nav class="woocommerce-breadcrumb pt-2 pb-2 mb-3 border border-right-0 border-left-0 border-top-0">',
+        'wrap_before' => '<nav class="pt-2 pb-2 mb-3 border border-right-0 border-left-0 border-top-0 woocommerce-breadcrumb">',
         'wrap_after'  => '</nav>',
         'before'      => '',
         'after'       => '',
@@ -95,7 +99,6 @@ function woocommerce_breadcrumb( $args = array() ) {
     wc_get_template( 'global/breadcrumb.php', $args );
 }
 
-
 /**
  * Output the start of the page wrapper with sidebar.
  */
@@ -110,7 +113,7 @@ function woocommerce_output_related_products() {
     $args = array(
         'posts_per_page' 	=> 4,
         'columns' 			=> 4,
-        'orderby' 			=> 'rand',
+        'orderby' 			=> 'rand', // @codingStandardsIgnoreLine.
     );
 woocommerce_related_products( apply_filters( 'woocommerce_output_related_products_args', $args ) );
 }
@@ -119,7 +122,7 @@ woocommerce_related_products( apply_filters( 'woocommerce_output_related_product
  * Output placeholders for the single variation.
  */
 function woocommerce_single_variation() {
-    echo '<div class="woocommerce-variation single_variation border border-left-0 border-right-0 mb-3 pt-2 pb-2"></div>';
+    echo '<div class="border border-left-0 border-right-0 mb-3 pt-2 pb-2 woocommerce-variation single_variation"></div>';
 }
 
 /** 
@@ -135,20 +138,3 @@ function tml_add_css_class_woocommerce_checkout_fields( $fields ) {
     }
     return $fields;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

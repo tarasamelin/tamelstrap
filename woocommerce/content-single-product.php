@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying product content in the single-product.php template
- * v3.0.0
+ * @version     3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

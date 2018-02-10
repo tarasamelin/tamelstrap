@@ -1,7 +1,7 @@
 <?php
 /**
  * Single Product Image
- * v3.1.0
+ * @version     3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -20,6 +20,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 	'woocommerce-product-gallery--columns-' . absint( $columns ),
 	'images',
 ) );
+//the_post_thumbnail( 'thumbnail' );
 ?>
 <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5 <?php echo esc_attr( implode( ' ', array_map( 'sanitize_html_class', $wrapper_classes ) ) ); ?>" data-columns="<?php echo esc_attr( $columns ); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
 	<figure class="woocommerce-product-gallery__wrapper">
@@ -34,8 +35,8 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 		);
 
 		if ( has_post_thumbnail() ) {
-			$html  = '<div data-thumb="' . get_the_post_thumbnail_url( $post->ID, 'shop_thumbnail' ) . '" class="woocommerce-product-gallery__image"><a href="' . esc_url( $full_size_image[0] ) . '">';
-			$html .= get_the_post_thumbnail( $post->ID, 'shop_single', $attributes );
+			$html  = '<div data-thumb="' . get_the_post_thumbnail_url( $post->ID, 'woocommerce_thumbnail' ) . '" class="woocommerce-product-gallery__image"><a href="' . esc_url( $full_size_image[0] ) . '">';
+			$html .= get_the_post_thumbnail( $post->ID, 'woocommerce_single', $attributes );
 			$html .= '</a></div>';
 		} else {
 			$html  = '<div class="woocommerce-product-gallery__image--placeholder">';

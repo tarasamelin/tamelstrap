@@ -2,7 +2,7 @@
 /**
  * Cart totals
  * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart-totals.php.
- * v2.3.6
+ * @version     2.3.6
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

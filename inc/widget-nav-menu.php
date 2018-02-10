@@ -7,7 +7,7 @@ add_filter( 'widget_nav_menu_args', 'tml_sidebar_menu', 10, 4 );
 function tml_sidebar_menu( $nav_menu_args, $nav_menu, $args, $instance ) {
     if( $args['id'] == 'sidebar-1' ) {
         $nav_menu_args['container'] = '';
-        $nav_menu_args['menu_class'] = 'list-group ';
+        $nav_menu_args['menu_class'] = 'list-group rounded-0';
         $nav_menu_args[ 'walker' ] = new Sidebar_Walker_Nav_Menu();
         return $nav_menu_args;
     }
@@ -38,7 +38,7 @@ class Sidebar_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$classes[] = ( $args->walker->has_children ) ? '' : '';
 		$classes[] = ( $item->current || $item->current_item_ancestor ) ? 'active' : '';
 		$classes[] = 'menu-item-' . $item->ID;
-		$classes[] = ( $depth==0 ) ? 'p-0 list-group-item bg-white border border-secondary' : 'p-0 list-group-item bg-white border border-light';
+		$classes[] = ( $depth==0 ) ? 'rounded-0 p-0 list-group-item bg-white border border-secondary' : 'p-0 list-group-item bg-light border border-light';
 		
 		$class_names =  join(' ', apply_filters('nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 		$class_names = ' class="' . esc_attr($class_names) . '"';
@@ -56,11 +56,11 @@ class Sidebar_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$attributes .= ( $args->walker->has_children ) ? 'class="nav-link text-secondary"' : 'class="nav-link text-secondary"'; 
 		
 		$item_output = $args->before;
-		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<div class="btn-group w-100"><button class="btn btn-light w-100 text-left p-0" type="button"><a' . $attributes . '>' : '<a' . $attributes . '>';
+		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<div class="btn-group w-100"><button class="btn bg-white w-100 text-left p-0" type="button"><a' . $attributes . '>' : '<a' . $attributes . '>';
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '</a></button>' : '</a>';
         
-		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapse-id-'.$item->ID.'" aria-expanded="false" aria-controls="collapseExample" someid="'.$item->ID.'">+</button></div><ul class="collapse pl-0" id="collapse-id-'.$item->ID.'">' : '';
+		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<button class="btn bg-white" type="button" data-toggle="collapse" data-target="#collapse-id-'.$item->ID.'" aria-expanded="false" aria-controls="collapseExample" someid="'.$item->ID.'">+</button></div><ul class="collapse pl-0" id="collapse-id-'.$item->ID.'">' : '';
 		$item_output .= $args->after;
 		$output .= apply_filters ( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 }

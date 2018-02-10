@@ -2,7 +2,7 @@
 /**
  * Proceed to checkout button
  * Contains the markup for the proceed to checkout button on the cart.
- * v2.4.0
+ * @version     2.4.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

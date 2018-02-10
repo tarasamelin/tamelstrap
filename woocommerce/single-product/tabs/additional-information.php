@@ -1,7 +1,7 @@
 <?php
 /**
  * Additional Information tab
- * v3.0.0
+ * @version     3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

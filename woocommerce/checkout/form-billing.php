@@ -1,7 +1,7 @@
 <?php
 /**
  * Checkout billing information form
- * v3.0.9
+ * @version     3.0.9
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly

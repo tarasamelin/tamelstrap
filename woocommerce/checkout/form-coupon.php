@@ -1,7 +1,7 @@
 <?php
 /**
  * Checkout coupon form
- * v2.2
+ * @version     3.3.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

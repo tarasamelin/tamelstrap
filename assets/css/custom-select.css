@@ -1,0 +1,87 @@
+
+/* variable product variations select */
+table.variations.table select {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-radius: 0 !important;
+}
+
+.was-validated
+table.variations.table select:valid,
+table.variations.table select.is-valid {
+    border-color: #28a745;
+}
+
+.was-validated
+table.variations.table select:valid:focus,
+table.variations.table select.is-valid:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+.was-validated
+table.variations.table select:valid ~ .valid-feedback,
+.was-validated
+table.variations.table select:valid ~ .valid-tooltip,
+table.variations.table select.is-valid ~ .valid-feedback,
+table.variations.table select.is-valid ~ .valid-tooltip,
+.was-validated
+table.variations.table select:invalid ~ .invalid-feedback,
+.was-validated
+table.variations.table select:invalid ~ .invalid-tooltip,
+table.variations.table select.is-invalid ~ .invalid-feedback,
+table.variations.table select.is-invalid ~ .invalid-tooltip {
+    display: block;
+}
+
+.was-validated
+table.variations.table select:invalid,
+table.variations.table select.is-invalid {
+    border-color: #dc3545;
+}
+
+.was-validated
+table.variations.table select:invalid:focus,
+table.variations.table select.is-invalid:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+table.variations.table select {
+    display: inline-block;
+    max-width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-size: 8px 10px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+table.variations.table select:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+table.variations.table select:focus::-ms-value {
+    color: #495057;
+    background-color: #fff;
+}
+
+table.variations.table select[multiple] {
+    height: auto;
+    background-image: none;
+}
+
+table.variations.table select:disabled {
+    color: #868e96;
+    background-color: #e9ecef;
+}
+
+table.variations.table select::-ms-expand {
+    opacity: 0;
+}

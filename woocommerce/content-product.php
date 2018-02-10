@@ -1,7 +1,7 @@
 <?php
 /**
  * The template for displaying product content within loops
- * v3.0.0
+ * @version     3.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -14,7 +14,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 
-//var_dump($product->get_image());
 ?>
 <div <?php post_class('col-lg-4 col-md-6 col-sm-6 mb-3'); ?>>
 	<?php

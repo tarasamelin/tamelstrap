@@ -1,7 +1,7 @@
 <?php
 /**
  * External product add to cart
- * v2.1.0
+ * @version     2.1.0
  */
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

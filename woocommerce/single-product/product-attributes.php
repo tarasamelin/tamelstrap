@@ -2,7 +2,7 @@
 /**
  * Product attributes
  * Used by list_attributes() in the products class.
- * v3.1.0
+ * @version     3.1.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -35,9 +35,21 @@ require_once get_template_directory().'/inc/cpt.php';
 require_once get_template_directory().'/inc/aq_resizer.php';
 
 /*
- * Gallery
+ *  Shortcodes Galleries
  */
 require_once get_template_directory().'/shortcodes/tml-gallery.php';
+//require_once get_template_directory().'/shortcodes/tml-gallery2.php';
+
+/*
+ * Shortcode Contact form
+ */
+require_once get_template_directory().'/shortcodes/tml-contact-form.php';
+
+/*
+ * Shortcode Google Map
+ */
+require_once get_template_directory().'/shortcodes/tml-google-map.php';
+//require_once get_template_directory().'/shortcodes/tml-google-map2.php';
 
 /*
  * TML WooCommerce Template Functions
@@ -50,6 +62,6 @@ require_once get_template_directory().'/inc-wc/tml-wc-template-functions.php';
 require_once get_template_directory().'/inc-wc/tml-wc-template-hooks.php';
 
 
-
+	
 
 

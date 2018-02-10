@@ -1,6 +1,7 @@
 <?php
 /**
- * The sidebar containing the main widget area.
+ * Sidebar woocommerce
+ * @version     1.6.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
