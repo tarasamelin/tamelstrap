@@ -40,8 +40,10 @@ wp_enqueue_script( 'bootstrap-4-js' );
         wp_register_script( 'masonry-init', get_template_directory_uri().'/assets/js/masonry-init.js', array('masonry'), NULL, true );
         wp_enqueue_script( 'masonry-init');
 //    }
-wp_register_script( 'tml', get_template_directory_uri().'/assets/js/tml.js', array('bootstrap-4-js'), NULL, true );
+wp_register_script( 'tml', get_template_directory_uri().'/assets/js/tml.js', array( 'bootstrap-4-js' ), NULL, true );
 wp_enqueue_script( 'tml');
+    
+
     
     
 /**

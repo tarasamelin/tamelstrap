@@ -138,3 +138,40 @@ function tml_add_css_class_woocommerce_checkout_fields( $fields ) {
     }
     return $fields;
 }
+
+
+/** 
+ * Function for Cart link in header
+ * Hooked to action 'tml_header_cart'
+ */
+function tml_cart_link() {
+    ?>
+
+        <a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View cart', 'woocommerce' ); ?>">
+        <i class="fa fa-shopping-cart"></i>
+        <?php if (WC()->cart->get_cart_contents_count() > 0) : ?>
+        <span class="text-info count">(<?php echo wp_kses_data( WC()->cart->get_cart_contents_count() );?>)</span>
+        <span class="text-dark amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span>
+        <?php endif; ?> 
+        </a>
+
+    <?php
+}
+/** 
+ * Function for Updating AJAX WooCommerce Cart in header
+ * Hooked to filter 'woocommerce_add_to_cart_fragments'
+ */
+function tml_cart_link_fragment( $fragments ) {
+    ob_start();
+    tml_cart_link();
+    $fragments['a.cart-contents'] = ob_get_clean();
+    return $fragments;
+}
+	
+			
+		
+
+
+
+
+

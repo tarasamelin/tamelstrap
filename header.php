@@ -16,23 +16,26 @@
 <div id="page" class="site text-dark">
    
     <header id="masthead" class="site-header bg-white border border-right-0 border-left-0 border-top-0" role="banner">                
-                <nav class="container navbar navbar-expand-lg navbar-light">
+        <nav class="container navbar navbar-expand-lg navbar-light">
 <!--                    <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>-->
                     <?php tml_the_custom_logo();?>
                     <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
+                    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <?php 
                 wp_nav_menu(array(
                     'theme_location' => 'primary-menu',
-                    'container'       => 'div', 
-                    'container_class' => 'collapse navbar-collapse justify-content-end', 
-                    'container_id'    => 'navbarNavDropdown',
                     'menu_class' => 'navbar-nav',
                     'walker' => new Primary_Walker_Nav_Menu()
                     ));
+                if ( tml_is_woocommerce_activated() ){
+                    do_action( 'tml_header_cart' );
+                }
                 ?>
-                </nav>
+            </div>
+        </nav>
     </header>
 
 <?php get_template_part( 'template-parts/slider' ); ?>

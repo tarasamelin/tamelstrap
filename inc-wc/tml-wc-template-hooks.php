@@ -89,7 +89,14 @@ add_action( 'woocommerce_after_cart', 'woocommerce_cross_sell_display', 5 );
  */
 add_filter('woocommerce_checkout_fields', 'tml_add_css_class_woocommerce_checkout_fields' );
 
-
+/** 
+ * Add Cart link in header
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'tml_cart_link_fragment');
+/** 
+ * Update AJAX WooCommerce Cart in header
+ */
+add_action( 'tml_header_cart', 'tml_cart_link' );
 
 
 

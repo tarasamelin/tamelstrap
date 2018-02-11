@@ -5,7 +5,6 @@
  * =====================
  */
 
-
 /**
  * Excerpt Hooks
  */
@@ -73,5 +72,14 @@ itemprop="url">%2$s</a>',
 );
 return $html;    
 }
+
+/**
+ * Query WooCommerce activation
+ */ 
+function tml_is_woocommerce_activated() {
+    return class_exists( 'WooCommerce' ) ? true : false;
+}
+
+
 
 
