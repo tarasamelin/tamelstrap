@@ -6,6 +6,7 @@ $( 'header .navbar .dropdown' ).hover(function() {
 function() {
     $( this ).find( '.dropdown-menu' ).first().stop(true, true).delay(50).slideUp();
 });
+    
 $( 'header .navbar .dropdown > a' ).click(function(){
     var scr_w = $(window).width();
     if ( scr_w > 991 ) {

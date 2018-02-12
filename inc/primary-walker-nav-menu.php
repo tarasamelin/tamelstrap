@@ -11,7 +11,7 @@ class Primary_Walker_Nav_Menu extends Walker_Nav_Menu {
 function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ){ 
 //    print_r($args);
     $indent = ( $depth ) ? str_repeat("\t",$depth) : '';
-		
+//		li
 		$li_attributes = '';
 		$class_names = $value = '';
 		
@@ -32,7 +32,7 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ){
 		$id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
 		
 		$output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
-		
+//		a
 		$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
 		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr($item->target) . '"' : '';
 		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr($item->xfn) . '"' : '';

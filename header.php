@@ -27,6 +27,9 @@
                 <?php 
                 wp_nav_menu(array(
                     'theme_location' => 'primary-menu',
+                    'container'       => '', 
+//                    'container_class' => '',
+//                    'container_id'    => '',
                     'menu_class' => 'navbar-nav',
                     'walker' => new Primary_Walker_Nav_Menu()
                     ));
@@ -34,6 +37,7 @@
                     do_action( 'tml_header_cart' );
                 }
                 ?>
+  
             </div>
         </nav>
     </header>

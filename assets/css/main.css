@@ -19,6 +19,28 @@ a:hover {
     margin: 0rem 0 0;
 }
 
+/* woocommerce mini cart */
+.dropdown-menu.woocommerce-mini-cart {
+    left: auto;
+    right: 0; 
+}
+li.nav-item a.cart-contents.dropdown-toggle::after {
+    display: none;
+}
+.dropdown-menu.woocommerce-mini-cart .remove_from_cart_button{
+    display: inline-block;
+    border: 0.05rem solid #6c757d;
+    padding: 0 0.5rem;
+}
+/* woocommerce Cart in Header */
+header li.woocommerce-mini-cart-item a img{
+    max-width: 30px;
+    height: auto;
+    margin-bottom: 0.2rem;
+    margin-right: 0.3rem;
+}
+
+/* fixed header menu */
 .admin-bar .site-header.fixed-top {
     padding-top: 40px;
     margin-top: -8px;
@@ -165,7 +187,6 @@ ol.comment-list {
 form.woocommerce-ordering select {
     max-width: 14rem;
 }
-
 
 
 
