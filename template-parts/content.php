@@ -16,5 +16,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 			the_content();
+echo do_shortcode('[socialshare]');
 		?>
 </article><!-- #post-## -->

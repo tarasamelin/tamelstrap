@@ -25,14 +25,14 @@
                     
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <?php 
-                wp_nav_menu(array(
+                wp_nav_menu( array(
                     'theme_location' => 'primary-menu',
                     'container'       => '', 
 //                    'container_class' => '',
 //                    'container_id'    => '',
                     'menu_class' => 'navbar-nav',
                     'walker' => new Primary_Walker_Nav_Menu()
-                    ));
+                    ) );
                 if ( tml_is_woocommerce_activated() ){
                     do_action( 'tml_header_cart' );
                 }

@@ -154,7 +154,8 @@ require_once get_template_directory().'/inc-wc/tml-wc-mini-cart.php';
 function tml_cart_link_fragment( $fragments ) {
     ob_start();
     tml_cart_link();
-    $fragments['a.cart-contents'] = ob_get_clean();
+//    $fragments['a.cart-contents'] = ob_get_clean();
+    $fragments['ul.tml-wc-mini-cart'] = ob_get_clean();
     return $fragments;
 }
 	

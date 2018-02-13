@@ -52,6 +52,11 @@ require_once get_template_directory().'/shortcodes/tml-google-map.php';
 //require_once get_template_directory().'/shortcodes/tml-google-map2.php';
 
 /*
+ * Shortcode Socila Share
+ */
+require_once get_template_directory().'/shortcodes/tml-social-share.php';
+
+/*
  * TML WooCommerce Template Functions
  */
 require_once get_template_directory().'/inc-wc/tml-wc-template-functions.php';

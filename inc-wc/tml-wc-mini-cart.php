@@ -1,4 +1,10 @@
+<?php 
+/*
+ *TML WC mini cart with dropdown 
+ */
+?>
 <?php if ( ! WC()->cart->is_empty() ) : ?>
+<ul class="navbar-nav tml-wc-mini-cart"><li class="dropdown nav-item">
 <script>
 jQuery( function($) {
 $( 'header .navbar .dropdown a.cart-contents' ).click(function(){
@@ -12,7 +18,6 @@ function() {
 });
 });
 </script>
-<ul class="navbar-nav"><li class="dropdown nav-item">
         <a class="dropdown-toggle cart-contents" data-toggle="dropdown" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View cart', 'woocommerce' ); ?>">
         <i class="fa fa-shopping-cart"></i>
         
@@ -22,7 +27,7 @@ function() {
         <?php //woocommerce_mini_cart(); ?>
         <ul class="dropdown-menu rounded-0 woocommerce-mini-cart cart_list product_list_widget <?php echo esc_attr( $args['list_class'] ); ?>">
 		<?php
-			do_action( 'woocommerce_before_mini_cart_contents' );
+//			do_action( 'woocommerce_before_mini_cart_contents' );
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
 				$_product     = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
 				$product_id   = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
@@ -63,7 +68,7 @@ function() {
 </li></ul>
 
 <?php elseif ( WC()->cart->is_empty() ) : ?>
-<ul class="navbar-nav"><li class="nav-item">
+<ul class="navbar-nav tml-wc-mini-cart"><li class="nav-item">
 <a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View cart', 'woocommerce' ); ?>">
 <i class="fa fa-shopping-cart"></i>
 </a>

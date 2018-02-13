@@ -4,7 +4,6 @@
  */
 ?>
 </div><!-- #content -->
-   
     <footer id="colophon" class="site-footer bg-light pb-3 pt-3 mt-4 border border-right-0 border-left-0 border-bottom-0" role="contentinfo">
 <!--       <nav class="navbar navbar-expand-lg pb-3 pt-3">-->
         <div class="container">
