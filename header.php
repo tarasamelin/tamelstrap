@@ -13,7 +13,7 @@
 </head>
 <body <?php body_class(); ?>>
 
-<div id="page" class="site text-dark">
+<div id="page" class="site">
    
     <header id="masthead" class="site-header bg-white border border-right-0 border-left-0 border-top-0" role="banner">                
         <nav class="container navbar navbar-expand-lg navbar-light">

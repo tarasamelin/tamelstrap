@@ -4,6 +4,32 @@
     font-weight: normal!important;
 }
 
+.custom-select,
+.popover,
+body {
+    font-family: 'Circe-Regular', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+/*    color: #343a40;*/
+    color: #52575C;
+}
+
+.navbar-light .navbar-brand,
+body nav a,
+body nav a:hover,
+body a,
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+    font-family: 'Circe-Regular', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #868e96;
+}
+
 .button,
 .btn,
 button, a {
@@ -59,30 +85,6 @@ header li.woocommerce-mini-cart-item a img{
 .site-header.fixed-top nav {
     padding-top: 0;
     padding-bottom: 0;
-}
-
-.popover,
-body {
-    font-family: 'FuturaPT-Medium';
-    font-weight: normal;
-    font-style: normal;
-/*    color: #343a40;*/
-}
-
-.navbar-light .navbar-brand,
-body nav a,
-body nav a:hover,
-body a,
-body h1,
-body h2,
-body h3,
-body h4,
-body h5,
-body h6 {
-    font-family: 'FuturaPT-Medium';
-    font-weight: normal;
-    font-style: normal;
-    color: #868e96;
 }
 
 /* single-product gallery */

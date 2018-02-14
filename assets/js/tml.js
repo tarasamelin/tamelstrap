@@ -20,7 +20,7 @@ $( window ).scroll(function() {
     var header_h = $( 'header.site-header' ).height();
     var scr_h = $(window).height();
     var doc_h = $(document).height();
-    if ( $( this ).scrollTop() >= on_scroll_h && doc_h > ( scr_h + header_h + on_scroll_h + 100) ) {
+    if ( $( this ).scrollTop() >= on_scroll_h && doc_h > ( scr_h + header_h + on_scroll_h + 120) ) {
         $( 'header.site-header' ).addClass( 'fixed-top' );
     }
     else {
@@ -32,6 +32,10 @@ $( window ).scroll(function() {
 // Add some classes to html elements by jquery
 //$( 'table.variations.table select' ).addClass( 'custom-select' );
 
+// woocommerce MyAccount navigation
+$( '.woocommerce-MyAccount-navigation .is-active a' ).addClass( 'active' );
+$( '.woocommerce-edit-address .form-group input' ).addClass( 'form-control rounded-0' );
+$( '.woocommerce-edit-address .form-group select' ).addClass( 'form-control rounded-0' );
 
 
 });
