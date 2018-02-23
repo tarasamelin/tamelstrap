@@ -13,36 +13,38 @@ $( 'header .navbar .dropdown > a' ).click(function(){
         location.href = this.href;
     }
 });
-
 // Sticky nav menu
 $( window ).scroll(function() {
+    var scr_w = $(window).width();
     var on_scroll_h = 200;
     var header_h = $( 'header.site-header' ).height();
     var doc_h1 = $( 'div.site-content.container' ).height();
     var doc_h2 = $( 'footer.site-footer' ).height();
     var doc_h = doc_h1 + doc_h2;
-    // var doc_h = $(document).height();
     var scr_h = $(window).height();
-    if ( $( this ).scrollTop() >= on_scroll_h && doc_h > ( scr_h + header_h + on_scroll_h + 80) ) {
+    if ( $( this ).scrollTop() >= on_scroll_h && ( doc_h > ( scr_h + header_h + on_scroll_h + 80 ) ) && ( scr_w >= 768) ) {
         $( 'header.site-header' ).addClass( 'fixed-top' );
+        $( 'a.totopbtn' ).removeClass( 'd-none' );
+    }
+    else if( $( this ).scrollTop() >= on_scroll_h && ( doc_h > ( scr_h + header_h + on_scroll_h + 80 ) ) && ( scr_w < 768) ) {
+        $( 'header.site-header' ).removeClass( 'fixed-top' );
+        $( 'a.totopbtn' ).removeClass( 'd-none' );
     }
     else {
         $( 'header.site-header' ).removeClass( 'fixed-top' );
+        $( 'a.totopbtn' ).addClass( 'd-none' );
     }
-//    alert ( header_h );
+});    
+$( 'a.totopbtn' ).click(function() {
+  $('html, body' ).animate({ scrollTop: 0 }, 'slow');
 });
-
-
-
-
-
-// Add some classes to html elements by jquery
-//$( 'table.variations.table select' ).addClass( 'custom-select' );
-
 // woocommerce MyAccount navigation
 $( '.woocommerce-MyAccount-navigation .is-active a' ).addClass( 'active' );
 $( '.woocommerce-edit-address .form-group input' ).addClass( 'form-control rounded-0' );
 $( '.woocommerce-edit-address .form-group select' ).addClass( 'form-control rounded-0' );
 
+ 
+    
+    
 
 });

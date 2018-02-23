@@ -19,7 +19,7 @@ function() {
 });
 </script>
         <a class="dropdown-toggle cart-contents" data-toggle="dropdown" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View cart', 'woocommerce' ); ?>">
-        <i class="fa fa-shopping-cart"></i>
+        <i class="fa fa-shopping-basket"></i>
         
         <span class="text-info count">(<?php echo wp_kses_data( WC()->cart->get_cart_contents_count() );?>)</span>
         <span class="text-dark amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span>
@@ -70,7 +70,7 @@ function() {
 <?php elseif ( WC()->cart->is_empty() ) : ?>
 <ul class="navbar-nav tml-wc-mini-cart"><li class="nav-item">
 <a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View cart', 'woocommerce' ); ?>">
-<i class="fa fa-shopping-cart"></i>
+<i class="fa fa-shopping-basket"></i>
 </a>
 </li></ul>
 <?php endif; ?>

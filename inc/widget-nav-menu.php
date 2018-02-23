@@ -38,7 +38,7 @@ class Sidebar_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$classes[] = ( $args->walker->has_children ) ? '' : '';
 		$classes[] = ( $item->current || $item->current_item_ancestor ) ? 'active' : '';
 		$classes[] = 'menu-item-' . $item->ID;
-		$classes[] = ( $depth==0 ) ? 'rounded-0 p-0 list-group-item bg-white border border-secondary' : 'p-0 list-group-item bg-light border border-light';
+		$classes[] = ( $depth==0 ) ? 'rounded-0 p-0 list-group-item bg-white border' : 'rounded-0 p-0 list-group-item bg-light border';
 		
 		$class_names =  join(' ', apply_filters('nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 		$class_names = ' class="' . esc_attr($class_names) . '"';
@@ -60,7 +60,7 @@ class Sidebar_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '</a></button>' : '</a>';
         
-		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<button class="btn bg-white" type="button" data-toggle="collapse" data-target="#collapse-id-'.$item->ID.'" aria-expanded="false" aria-controls="collapseExample" >+</button></div><ul class="collapse pl-0" id="collapse-id-'.$item->ID.'">' : '';
+		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<button class="rounded-0 border-0 pl-3 pr-3 bg-white" type="button" data-toggle="collapse" data-target="#collapse-id-'.$item->ID.'" aria-expanded="false" aria-controls="collapseExample" ><i class="text-secondary fa fa-angle-down" aria-hidden="true"></i></button></div><ul class="collapse pl-0" id="collapse-id-'.$item->ID.'">' : '';
 		$item_output .= $args->after;
 		$output .= apply_filters ( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 }
