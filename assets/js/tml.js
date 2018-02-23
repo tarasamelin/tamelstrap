@@ -18,9 +18,12 @@ $( 'header .navbar .dropdown > a' ).click(function(){
 $( window ).scroll(function() {
     var on_scroll_h = 200;
     var header_h = $( 'header.site-header' ).height();
+    var doc_h1 = $( 'div.site-content.container' ).height();
+    var doc_h2 = $( 'footer.site-footer' ).height();
+    var doc_h = doc_h1 + doc_h2;
+    // var doc_h = $(document).height();
     var scr_h = $(window).height();
-    var doc_h = $(document).height();
-    if ( $( this ).scrollTop() >= on_scroll_h && doc_h > ( scr_h + header_h + on_scroll_h + 120) ) {
+    if ( $( this ).scrollTop() >= on_scroll_h && doc_h > ( scr_h + header_h + on_scroll_h + 80) ) {
         $( 'header.site-header' ).addClass( 'fixed-top' );
     }
     else {
@@ -28,6 +31,10 @@ $( window ).scroll(function() {
     }
 //    alert ( header_h );
 });
+
+
+
+
 
 // Add some classes to html elements by jquery
 //$( 'table.variations.table select' ).addClass( 'custom-select' );

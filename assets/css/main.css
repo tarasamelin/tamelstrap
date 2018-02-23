@@ -137,6 +137,7 @@ ol.flex-control-nav.flex-control-thumbs li img {
     height: auto;
 }
 
+.woocommerce-product-gallery__image.flex-active-slide a img,
 .woocommerce-product-gallery__image.flex-active-slide a,
 img.attachment-woocommerce_single.size-woocommerce_single,
 img.attachment-shop_single.size-shop_single {

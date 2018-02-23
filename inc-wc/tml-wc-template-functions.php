@@ -160,7 +160,22 @@ function tml_cart_link_fragment( $fragments ) {
 }
 	
 			
-		
+/**
+ * Adds a demo store banner to the site if enabled.
+ */
+function woocommerce_demo_store() {
+    if ( ! is_store_notice_showing() ) {
+        return;
+    }
+
+    $notice = get_option( 'woocommerce_demo_store_notice' );
+
+    if ( empty( $notice ) ) {
+        $notice = __( 'This is a demo store for testing purposes &mdash; no orders shall be fulfilled.', 'woocommerce' );
+    }
+
+    echo apply_filters( 'woocommerce_demo_store', '<div class="border bg-light"><p class="container p-2 pb-4 pt-4 mb-0 text-left text-secondary woocommerce-store-notice demo_store">' . wp_kses_post( $notice ) . ' <a href="#" class="woocommerce-store-notice__dismiss-link"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a></p><div>', $notice ); // WPCS: XSS ok.
+}		
 
 
 

@@ -1,8 +1,10 @@
 <?php
 /**
- * TML Contact Form Shortcode
+ * TML Contact Form Shortcode [contact-form]
  */
-
+/*
+[contact-form email="" subject="" label_name="" label_email="" label_phone="" label_subject="" label_message="" label_submit="" error_empty="" error_noemail="" success=""]
+*/
 // function to get the IP address of the user
 function tml_get_the_ip() {
 	if (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
@@ -24,6 +26,7 @@ function tml_contact_form_sc( $atts ) {
 		"subject" => '',
 		"label_name" => __( 'Name' ),
 		"label_email" => __( 'Email' ),
+		"label_phone" => 'tel',
 		"label_subject" => __( 'Title:' ),
 		"label_message" => __( 'Text' ),
 		"label_submit" => __( 'Next' ),
@@ -58,7 +61,12 @@ function tml_contact_form_sc( $atts ) {
 
 		if ( $error == false ) {
 			$email_subject = "[" . get_bloginfo('name') . "] " . $form_data['subject'];
-			$email_message = $form_data['message'] . "\n\nIP: " . tml_get_the_ip();
+			$email_message = "IP: " . tml_get_the_ip(). "\n\n";
+			$email_message .= "Subject: " . $form_data['subject'] . "\n\n";
+			$email_message .= "Name: " .$form_data['your_name'] . "\n\n";
+			$email_message .= "E-mail: " .$form_data['email'] . "\n\n";
+			$email_message .= "Phone: " .$form_data['phone'] . "\n\n";
+			$email_message .= "Message: " .$form_data['message'] . "\n\n";
 			$headers  = "From: ".$form_data['your_name']." <".$form_data['email'].">\n";
 			$headers .= "Content-Type: text/plain; charset=UTF-8\n";
 			$headers .= "Content-Transfer-Encoding: 8bit\n";
@@ -71,7 +79,7 @@ function tml_contact_form_sc( $atts ) {
 	if( $result != "" ) {
 		$info = '<div class="info">'.$result.'</div>';
 	}
-	$email_form = '<form class="contact-form" method="post" action="'.get_permalink().'">
+	$email_form = '<div class="row"><form class="col-md-8 contact-form" method="post" action="'.get_permalink().'">
 		<div class="form-group mb-2">
 			<label class="text-secondary mb-0" for="cf_name">'.$label_name.':</label>
 			<input class="form-control rounded-0" id="cf_name" name="your_name" type="text" size="50" maxlength="50" value="'.$form_data['your_name'].'" />
@@ -79,6 +87,10 @@ function tml_contact_form_sc( $atts ) {
 		<div class="form-group mb-2">
 			<label class="text-secondary mb-0" for="cf_email">'.$label_email.':</label>
 			<input class="form-control rounded-0" id="cf_email" name="email" type="text" size="50" maxlength="50" value="'.$form_data['email'].'" />
+		</div>
+        <div class="form-group mb-2">
+			<label class="text-secondary mb-0" for="cf_email">'.$label_phone.':</label>
+			<input class="form-control rounded-0" id="cf_email" name="phone" type="text" size="50" maxlength="50" value="'.$form_data['phone'].'" />
 		</div>
 		<div class="form-group mb-2">
 			<label class="text-secondary mb-0" for="cf_subject">'.$label_subject.'</label>
@@ -91,11 +103,11 @@ function tml_contact_form_sc( $atts ) {
 		<div class="form-group mb-3">
 			<input class="pt-1 pb-1 btn btn-outline-secondary rounded-0" id="cf_send" type="submit" value="'.$label_submit.'" name="send" />
 		</div>
-	</form>';
+	</form></div>';
 	
 	if($sent == true) {
 		return $info.$email_form;
 	} else {
 		return $info.$email_form;
 	}
-} 
+}
