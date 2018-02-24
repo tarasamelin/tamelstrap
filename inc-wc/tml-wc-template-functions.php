@@ -34,7 +34,7 @@ function woocommerce_get_product_thumbnail( $size = 'shop_catalog', $deprecated1
     $image_size = apply_filters( 'single_product_archive_thumbnail_size', $size );
         
     $img_classes_array = get_post_class();
-    $img_classes_array[] = 'img-fluid mx-auto d-block';
+    $img_classes_array[] = 'img-fluid mx-auto d-block border';
     $img_class = implode( ' ', $img_classes_array );
     
     return $product ? $product->get_image( $image_size,  $attr = array( 'class' => $img_class ) ) : '';
@@ -176,8 +176,5 @@ function woocommerce_demo_store() {
 
     echo apply_filters( 'woocommerce_demo_store', '<div class="border bg-light"><p class="container p-2 pb-4 pt-4 mb-0 text-left text-secondary woocommerce-store-notice demo_store">' . wp_kses_post( $notice ) . ' <a href="#" class="woocommerce-store-notice__dismiss-link"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a></p><div>', $notice ); // WPCS: XSS ok.
 }		
-
-
-
 
 
