@@ -31,7 +31,7 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ){
 		$id = apply_filters('nav_menu_item_id', 'menu-item-'.$item->ID, $item, $args);
 		$id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
 		
-		$output .= $indent . '<li' . $id . $value . $class_names . $li_attributes . '>';
+		$output .= $indent . '<li'. $id . $value . $class_names . $li_attributes . '>';
 //		a
 		$attributes = ! empty( $item->attr_title ) ? ' title="' . esc_attr($item->attr_title) . '"' : '';
 		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr($item->target) . '"' : '';
@@ -41,7 +41,7 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ){
 		$attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-secondary" data-toggle="dropdown"' : ' class="nav-link text-secondary"'; 
 		
 		$item_output = $args->before;
-		$item_output .= '<a' . $attributes . '>';
+		$item_output .= '<a ' . $attributes . ' itemprop="url">';
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? ' <i class="fa fa-angle-down" aria-hidden="true"></i></a>' : '</a>';
 //		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? ' <b class="caret"></b></a>' : '</a>';

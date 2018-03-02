@@ -56,7 +56,7 @@ class Sidebar_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$attributes .= ( $args->walker->has_children ) ? 'class="nav-link text-secondary"' : 'class="nav-link text-secondary"'; 
 		
 		$item_output = $args->before;
-		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<div class="btn-group w-100"><button class="btn bg-white w-100 text-left p-0" type="button"><a' . $attributes . '>' : '<a' . $attributes . '>';
+		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<div class="btn-group w-100"><button class="btn bg-white w-100 text-left p-0" type="button"><a' . $attributes . ' itemprop="url">' : '<a' . $attributes . ' itemprop="url">';
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '</a></button>' : '</a>';
         

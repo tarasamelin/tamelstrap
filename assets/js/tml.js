@@ -43,8 +43,8 @@ $( '.woocommerce-MyAccount-navigation .is-active a' ).addClass( 'active' );
 $( '.woocommerce-edit-address .form-group input' ).addClass( 'form-control rounded-0' );
 $( '.woocommerce-edit-address .form-group select' ).addClass( 'form-control rounded-0' );
 
- 
-    
+ $( '#secondary .current-menu-parent ul' ).addClass('show');
+
     
 
 });

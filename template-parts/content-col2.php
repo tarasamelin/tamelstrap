@@ -2,7 +2,6 @@
 /**
  * Template part for displaying posts in category in 1 coll
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -16,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <a href="<?php the_permalink(); ?>">
         <?php 
         the_post_thumbnail('medium_large', array(
-            'class' => 'img-fluid',
+            'class' => 'img-fluid border',
             'alt' => 'Responsive image',
         )); 
         ?>

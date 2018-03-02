@@ -74,7 +74,7 @@ require_once get_template_directory().'/inc-wc/tml-wc-custome-checkout-fields.ph
 /*
  * TML WooCommerce Custome Payment gateway
  */
-//require_once get_template_directory().'/inc-wc/tml-wc-custome-payment-gateway.php';
+require_once get_template_directory().'/inc-wc/tml-wc-custome-payment-gateway.php';
 
 
 

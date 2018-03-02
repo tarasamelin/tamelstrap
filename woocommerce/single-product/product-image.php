@@ -36,6 +36,7 @@ $wrapper_classes   = apply_filters( 'woocommerce_single_product_image_gallery_cl
 		echo apply_filters( 'woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id );
 
 		do_action( 'woocommerce_product_thumbnails' );
+        
 		?>
 	</figure>
 </div>

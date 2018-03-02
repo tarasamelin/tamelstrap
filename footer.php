@@ -5,7 +5,7 @@
 ?>
 <a class="d-none totopbtn"><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i></a>
 </div><!-- #content -->
-    <footer id="colophon" class="site-footer bg-light pb-3 pt-3 mt-4 border border-right-0 border-left-0 border-bottom-0" role="contentinfo">
+    <footer id="colophon" class="site-footer bg-light pb-3 pt-3 mt-4 border border-right-0 border-left-0 border-bottom-0" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
 <!--       <nav class="navbar navbar-expand-lg pb-3 pt-3">-->
         <div class="container">
             <div class="row">

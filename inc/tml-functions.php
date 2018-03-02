@@ -62,12 +62,15 @@ add_filter( 'get_custom_logo',  'tml_custom_logo_url' );
 function tml_custom_logo_url ( $html ) {
 
 $custom_logo_id = get_theme_mod( 'custom_logo' );
-$url = network_site_url();
+    $url = esc_url( home_url( '/' ) ); 
+//$url = network_site_url();
+//if(get_site_option( 'WPLANG' ) == en_EN) {}
 $html = sprintf( '<a href="%1$s" class="navbar-brand custom-logo-link" rel="home" 
 itemprop="url">%2$s</a>',
     esc_url( $url  ),
     wp_get_attachment_image( $custom_logo_id, 'full', false, array(
         'class'    => 'custom-logo img-fluid',
+        'itemprop'    => 'image',
     ) )
 );
 return $html;    

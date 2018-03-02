@@ -11,59 +11,51 @@ function add_other_payment_gateway( $gateways ){
 class WC_Other_Payment_Gateway extends WC_Payment_Gateway {
 
 	public function __construct(){
+        // Get settings
 		$this->id = 'other_payment';
-		$this->method_title = __('Custom Payment','woocommerce-other-payment-gateway').'1';
-		$this->title = __('Custom Payment','woocommerce-other-payment-gateway').'1';
+		$this->method_title = 'Custom Payment 1';
+		$this->title = 'Custom Payment 1';
 		$this->has_fields = true;
-		$this->init_form_fields();
-		$this->init_settings();
 		$this->enabled = $this->get_option('enabled');
 		$this->title = $this->get_option('title');
 		$this->description = $this->get_option('description');
-		$this->hide_text_box = $this->get_option('hide_text_box');
+        // Load the settings
+        $this->init_form_fields();
+		$this->init_settings();
 
-		add_action('woocommerce_update_options_payment_gateways_'.$this->id, array($this, 'process_admin_options'));
+		add_action( 'woocommerce_update_options_payment_gateways_'.$this->id, array( $this, 'process_admin_options' ) );
 	}
     
 	public function init_form_fields(){
     $this->form_fields = array(
         'enabled' => array(
-        'title' 		=> __( 'Enable/Disable', 'woocommerce-other-payment-gateway' ),
+        'title' 		=> __( 'Enable/Disable', 'woocommerce' ),
         'type' 			=> 'checkbox',
-        'label' 		=> __( 'Enable Custom Payment', 'woocommerce-other-payment-gateway' ),
+        'label' 		=> __( 'Enable cash on delivery', 'woocommerce' ),
         'default' 		=> 'yes'
         ),
         'title' => array(
-            'title' 		=> __( 'Method Title', 'woocommerce-other-payment-gateway' ),
+            'title' 		=> __( 'Payment method title.', 'woocommerce' ),
             'type' 			=> 'text',
-            'description' 	=> __( 'This controls the title', 'woocommerce-other-payment-gateway' ),
-            'default'		=> __( 'Custom Payment', 'woocommerce-other-payment-gateway' ),
+            'description' 	=> __( 'This controls the title', 'woocommerce' ),
+            'default'		=> __( 'Custom Payment', 'woocommerce' ),
             'desc_tip'		=> true,
         ),
         'description' => array(
-            'title' => __( 'Customer Message', 'woocommerce-other-payment-gateway' ),
+            'title' => __( 'Description', 'woocommerce' ),
             'type' => 'textarea',
-            'css' => 'max-width:500px;',
-            'default' => 'None of the other payment options are suitable for you? please drop us a note about your favourable payment option and we will contact you as soon as possible.',
-            'description' 	=> __( 'The message which you want it to appear to the customer in the checkout page.', 'woocommerce-other-payment-gateway' ),
+            'css' => 'max-width:400px;',
+            'default' => '',
+            'description' 	=> __( 'Payment method description that the customer will see on your website.', 'woocommerce' ),
         ),
-        'hide_text_box' => array(
-            'title' 		=> __( 'Hide The Payment Field', 'woocommerce-other-payment-gateway' ),
-            'type' 			=> 'checkbox',
-            'label' 		=> __( 'Hide', 'woocommerce-other-payment-gateway' ),
-            'default' 		=> 'no',
-            'description' 	=> __( 'If you do not need to show the text box for customers at all, enable this option.', 'woocommerce-other-payment-gateway' ),
-        ),
-
  );
 }
 /**
- * Admin Panel Options
- * @return void
+ * Show Options in WooCommerce Admin Panel
  */
 	public function admin_options() {
 		?>
-		<h3><?php _e( 'Custom Payment Settings', 'woocommerce-other-payment-gateway' ); ?> 1</h3>
+		<h3>Custom Payment  1 <?php _e( 'Settings', 'woocommerce' ); ?></h3>
         <div id="poststuff">
 				<div id="post-body" class="metabox-holder columns-2">
 					<div id="post-body-content">
@@ -80,29 +72,29 @@ class WC_Other_Payment_Gateway extends WC_Payment_Gateway {
 	public function process_payment( $order_id ) {
 		global $woocommerce;
 		$order = new WC_Order( $order_id );
-		// Mark as on-hold (we're awaiting the cheque)
-		$order->update_status('processing', __( 'Awaiting payment', 'woocommerce-other-payment-gateway' ));
-		// Reduce stock levels
-		wc_reduce_stock_levels( $order_id );
-		if(isset($_POST[ $this->id.'-admin-note']) && trim($_POST[ $this->id.'-admin-note'])!=''){
-			$order->add_order_note(esc_html($_POST[ $this->id.'-admin-note']),1);
+        
+        if ( $order->get_total() > 0 ) {
+			// Mark as on-hold (we're awaiting the cheque)
+			$order->update_status( 'processing', _x( 'Awaiting check payment', 'Check payment method', 'woocommerce' ) );
+		} else {
+			$order->payment_complete();
 		}
-		// Remove cart
+        
+//		$order->update_status( 'on-hold', __( 'Payment to be made upon delivery.', 'woocommerce' ) );
+//		$order->update_status( 'processing', __( 'Payment to be made upon delivery.', 'woocommerce' ) );
+		wc_reduce_stock_levels( $order_id );
 		$woocommerce->cart->empty_cart();
-		// Return thankyou redirect
 		return array(
 			'result' => 'success',
 			'redirect' => $this->get_return_url( $order )
 		);	
 	}
-
-	public function payment_fields(){
-		if( $this->hide_text_box !== 'yes' ){
-	    ?>
-		<fieldset><p class="form-row form-row-wide">
-        <label for="<?php echo $this->id; ?>-admin-note"><?php echo esc_attr( $this->description ); ?></label>
-        </p><div class="clear"></div></fieldset>
-		<?php
-		}
-	}
+    
+    
+/**
+ * Show payment method description on checkout page
+ */
+	public function payment_fields(){ ?>
+		<p><?php echo esc_attr( $this->description ); ?></p>
+    <?php }
 }

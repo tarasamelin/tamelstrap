@@ -14,8 +14,8 @@
 <body <?php body_class(); ?>>
 
 <div id="page" class="site">
-   
-    <header id="masthead" class="site-header bg-white border border-right-0 border-left-0 border-top-0" role="banner">                
+
+        <header id="masthead" class="site-header bg-white border border-right-0 border-left-0 border-top-0" role="banner" itemscope itemtype="https://schema.org/WPHeader">                
         <nav class="container navbar navbar-expand-lg navbar-light">
 <!--                    <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>-->
                     <?php tml_the_custom_logo();?>
@@ -23,7 +23,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown" itemscope itemtype="https://www.schema.org/SiteNavigationElement">
                 <?php 
                 wp_nav_menu( array(
                     'theme_location' => 'primary-menu',
