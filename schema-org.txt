@@ -1,0 +1,78 @@
+
+
+header.php
+itemscope itemtype="https://schema.org/WPHeader"
+itemscope itemtype="https://www.schema.org/SiteNavigationElement"
+itemprop="logo"(tml-function.php 'itemprop'=> 'logo',)
+itemprop="url"
+itemscope itemtype="http://schema.org/WebPage"
+
+primary-walker-nav-menu.php
+itemscope itemtype="https://schema.org/SiteNavigationElement"
+itemprop="url"
+
+sidebar.php
+itemscope itemtype="https://schema.org/WPSidebar"
+
+footer.php
+itemscope itemtype="https://schema.org/WPFooter"
+itemprop="telephone" 
+
+content.php
+content-page.php
+itemscope itemtype="https://schema.org/Article"
+itemprop="headline"
+echo '<div itemprop="articleBody">';
+
+content-col2.php
+itemscope itemtype="https://schema.org/BlogPosting"
+
+
+-content-single-product.php
+itemscope itemtype="https://schema.org/Product"
+
+-single-product/title.php
+itemprop="headline"
+
+-single-product/short-description.php
+itemprop="description"
+
+-single-product/product-image.php
+figure itemscope itemprop="image" itemtype="https://schema.org/ImageObject"
+
+
+---------------------------------------------------
+
+itemscope itemtype="https://schema.org/Product"
+itemscope itemtype="https://schema.org/BlogPosting"
+itemscope itemtype="https://schema.org/Article"
+itemscope itemtype="https://schema.org/WPSideBar"
+itemscope itemtype="https://schema.org/WPFooter"
+itemscope itemtype="https://schema.org/SiteNavigationElement"
+itemscope itemtype="https://schema.org/ImageObject"
+itemscope itemtype="https://schema.org/Organization"
+itemscope itemtype="https://schema.org/PostalAddress"
+itemscope itemprop="mainEntityOfPage" itemType="https://schema.org/WebPage"
+itemprop="comment" itemscope itemtype="https://schema.org/Comment"
+
+
+itemprop="url"
+itemprop="logo"
+itemprop="headline"
+itemprop="articleBody"
+itemprop="description"
+itemprop="datePublished"
+itemprop="author"
+itemprop="articleSection"
+itemprop="image"
+itemprop="text"
+itemprop="creator"
+itemprop="copyrightYear"
+itemprop="dateModified"
+itemprop="address"
+itemprop="streetAddress"
+itemprop="postalCode"
+itemprop="addressLocality"
+itemprop="telephone"
+itemprop="width"
+itemprop="height"

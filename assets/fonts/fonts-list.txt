@@ -5,30 +5,30 @@ Aleo-Regular
 AnonymousPro-Regular
 AnonymousPro-Bold
 
-ApercuPro-Regular
++ApercuPro-Regular
 ApercuPro-Bold
 
 Century-Gothic-Regular
 Century-Gothic-Bold
 
 Circe-Bold
-Circe-Regular
++Circe-Regular
 
 FuturaNew-Bold
-FuturaNew-Medium
+++FuturaNew-Medium
 
 FuturaPT-Bold
 FuturaPT-Light
-FuturaPT-Medium
++FuturaPT-Medium
 
 GillSans-Bold
-GillSans-Regular
++GillSans-Regular
 
 GothamPro-Bold
 GothamPro-Regular
 
 HarmoniaSansProCyr-Regular
-HarmoniaSansProCyr-SemiBold
++HarmoniaSansProCyr-SemiBold
 
 HelveticaNeue-Bold
 HelveticaNeue-Medium
@@ -40,7 +40,7 @@ Lato-Bold
 Muller-Bold
 Muller-Regular
 
-MuseoSansCyrl-500
++MuseoSansCyrl-500
 MuseoSansCyrl-700
 
 MuseoSlabCyrl-500
@@ -79,4 +79,4 @@ UniNeue-Bold
 UniNeue-black
 
 Qanelas-Medium
-Qanelas-SemiBold
++Qanelas-SemiBold

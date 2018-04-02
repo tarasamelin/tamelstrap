@@ -39,6 +39,7 @@ require_once get_template_directory().'/inc/aq_resizer.php';
  */
 require_once get_template_directory().'/shortcodes/tml-gallery.php';
 //require_once get_template_directory().'/shortcodes/tml-gallery2.php';
+//require_once get_template_directory().'/shortcodes/tml-items-carousel.php';
 
 /*
  * Shortcode Contact form
@@ -70,13 +71,8 @@ require_once get_template_directory().'/inc-wc/tml-wc-template-hooks.php';
  * TML WooCommerce Custome Checkout Fields
  */
 require_once get_template_directory().'/inc-wc/tml-wc-custome-checkout-fields.php';
- 
+
 /*
  * TML WooCommerce Custome Payment gateway
  */
 require_once get_template_directory().'/inc-wc/tml-wc-custome-payment-gateway.php';
-
-
-
-
-

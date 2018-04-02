@@ -178,6 +178,8 @@ a.button+a.added_to_cart.wc-forward {
 form.search-form button.form-control,
 form.woocommerce-product-search button.form-control {
     margin-left: -1px;
+	margin-left: -3rem;
+    width: 3rem!important;
 }
 
 /* single-product comments */
