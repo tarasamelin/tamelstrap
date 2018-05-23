@@ -24,7 +24,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <nav aria-label="breadcrumb" role="navigation">
     <ol class="text-secondary breadcrumb bg-white pl-0 pt-2 pb-2 mb-3 border border-right-0 border-left-0 border-top-0">
         <li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo get_the_title( get_option('page_on_front') ); ?></a></li>
-        <li class="breadcrumb-item active"><?php the_archive_title(); ?></li>
+<!--        <li class="breadcrumb-item active"><?php the_archive_title(); ?></li>-->
+        <li class="breadcrumb-item active"><?php single_cat_title(); ?></li>
     </ol>
 </nav>
 

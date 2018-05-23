@@ -10,8 +10,6 @@ body {
     font-family: 'Circe-Regular', sans-serif;
     font-weight: normal;
     font-style: normal;
-/*    color: #343a40;*/
-    color: #52575C;
 }
 
 .navbar-light .navbar-brand,
@@ -27,7 +25,6 @@ body h6 {
     font-family: 'Circe-Regular', sans-serif;
     font-weight: normal;
     font-style: normal;
-    color: #868e96;
 }
 
 .button,
@@ -36,17 +33,13 @@ button, a {
     cursor: pointer;
 }
 
-a:hover {
-    text-decoration: none;
-    color: #3C5363;
-}
-
 .dropdown-menu {
     margin: 0rem 0 0;
 }
 .dropdown-toggle::after {
     display: none;
 }
+
 /* woocommerce mini cart */
 .dropdown-menu.woocommerce-mini-cart {
     left: auto;
@@ -57,11 +50,11 @@ li.nav-item a.cart-contents.dropdown-toggle::after {
     display: none;
 }
 */
-.dropdown-menu.woocommerce-mini-cart .remove_from_cart_button{
+.dropdown-menu.woocommerce-mini-cart .remove_from_cart_button {
     display: inline-block;
-    border: 0.05rem solid #6c757d;
     padding: 0 0.5rem;
 }
+
 /* woocommerce Cart in Header */
 header li.woocommerce-mini-cart-item a img{
     max-width: 30px;
@@ -76,9 +69,6 @@ header li.woocommerce-mini-cart-item a img{
     margin-top: -8px;
     transition: padding-top 0.4s;
     -webkit-transition: padding-top 0.4s;
--moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
--webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
 .site-header.fixed-top {
     padding-top: 0.8rem;
@@ -140,7 +130,7 @@ ol.flex-control-nav.flex-control-thumbs li img {
     max-width: 100%;
     height: auto;
 }
-
+.woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image a img.wp-post-image,
 .woocommerce-product-gallery__image.flex-active-slide a img,
 .woocommerce-product-gallery__image.flex-active-slide a,
 img.attachment-woocommerce_single.size-woocommerce_single,
@@ -179,7 +169,7 @@ form.search-form button.form-control,
 form.woocommerce-product-search button.form-control {
     margin-left: -1px;
 	margin-left: -3rem;
-    width: 3rem!important;
+    width: 3rem !important;
 }
 
 /* single-product comments */
@@ -208,14 +198,7 @@ form.woocommerce-ordering select {
     position: fixed;
     bottom: 5rem;
     right: 1rem;
-    color: #868e96 !important;
     font-size: 2.5rem;
-    opacity: 0.4;
-}
-
-.totopbtn:hover {
-    color: #868e96 !important;
-    opacity: 0.8;
 }
 
 

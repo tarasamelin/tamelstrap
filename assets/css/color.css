@@ -1,0 +1,341 @@
+/* ALL SITE COLORS CSS Styles */
+
+/* -- Global font colar -- */
+
+/*.popover,*/
+body {color: #52575C}
+
+body .text-secondary {color:#81969D!important;}
+body .text-info {color:#7CAED1!important;}
+body .text-success {color:#7CDA24!important;}
+
+body a {color: #81969D;}
+
+body a.text-secondary:hover ,
+body a.text-secondary:focus,
+a:hover {
+    text-decoration: none;
+    color: #3C5363 !important;
+}
+
+/* -- HEADERS -- */
+body a h1,
+body a h2,
+body a h3,
+body a h4,
+body a h5,
+body a h6,
+body h1 a,
+body h2 a,
+body h3 a,
+body h4 a,
+body h5 a,
+body h6 a{
+    color: #81969D !important;
+}
+body h1,
+body h2,
+body h4,
+body h5,
+body h6 {
+    color: #81969D;
+}
+
+body h1.h2,
+body h2,
+body h3.h2 a {
+    color: #81969D !important;
+}
+
+/* -- Borders colar -- */
+body .border-left-0 {border-left: 0!important;}
+body .border-right-0 {border-right: 0!important;}
+body .border-top-0 {border-top: 0!important;}
+body .border-bottom-0 {border-bottom: 0!important;}
+
+.dropdown-menu,
+.custom-select,
+.form-control,
+.border {
+    border: 1px solid #C4D6DC !important;
+    border-radius: 0 !important;
+}
+
+hr { border-top: 1px solid #C4D6DC!important; }
+
+/* -- breadcrumb -- */
+.woocommerce-breadcrumb,
+.breadcrumb-item.active {
+    color: #81969D;
+}
+
+.breadcrumb-item+.breadcrumb-item::before,
+.breadcrumb a,
+.woocommerce-breadcrumb a {
+    color: #81969D !important;
+}
+
+/* woocommerce pagination */
+.woocommerce-pagination {
+    clear: both;
+}
+
+.woocommerce-pagination a {
+    border: 1px solid #C4D6DC !important;
+    color: #81969D;
+}
+.woocommerce-pagination span {
+    background-color: #EEFCFF;
+    color: #81969D;
+}
+
+/*-- Scroll to top button --*/
+.totopbtn {
+    color: #81969D !important;
+    opacity: 0.4;
+}
+
+.totopbtn:hover {
+    color: #81969D !important;
+    opacity: 0.8;
+}
+
+/* ---- SideBar Menu Navigation --- */
+#secondary .widget_nav_menu h2 {
+    border-top: 1px solid #C4D6DC;
+    border-left: 1px solid #C4D6DC;
+    border-right: 1px solid #C4D6DC;
+    color: #81969D !important;
+}
+
+#secondary button i.fa.fa-plus-circle {
+    color: #81969D !important;
+    opacity: 0.8;
+}
+#secondary li ul li.list-group-item {
+    margin-bottom: 0 !important;
+}
+
+#secondary li ul li.current-menu-item.active,
+#secondary li.menu-item-object-product_cat.current-menu-item.active {
+    border-left: 0.35rem solid #C4D6DC !important;
+}
+
+/* ---- Filters by attributes checkbox list --- */
+
+#secondary .woocommerce-widget-layered-nav h2 {
+    border-bottom: 1px solid #C4D6DC;
+    color: #7DCA36 !important;
+}
+
+#secondary ul.woocommerce-widget-layered-nav-list li a:before {
+    color: #7CAED1!important;
+}
+
+#secondary .woocommerce-widget-layered-nav {
+    border: 1px solid #C4D6DC;
+}
+
+/* -- custome-select -- */
+
+.custom-select {
+    color: #81969D;
+}
+
+table.variations.table select {
+    color: #81969D;
+    border: 1px solid #C4D6DC;
+}
+
+table.variations.table select:focus {
+    border-color: #C4D6DC;
+}
+
+table.variations.table select:focus::-ms-value {
+    color: #81969D;
+    background-color: #FFFFFF;
+}
+
+table.variations.table select:disabled {
+    color: #81969D;
+    background-color: #FFFFFF;
+}
+
+/* -- variable product variations select COLORS custome-select.css -- */
+.was-validated
+table.variations.table select:valid,
+table.variations.table select.is-valid {
+    border-color: #28a745;
+}
+
+.was-validated
+table.variations.table select:valid:focus,
+table.variations.table select.is-valid:focus {
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+.was-validated
+table.variations.table select:invalid,
+table.variations.table select.is-invalid {
+    border-color: #dc3545;
+}
+
+.was-validated
+table.variations.table select:invalid:focus,
+table.variations.table select.is-invalid:focus {
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+table.variations.table select {
+    color: #495057;
+    background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23333' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-size: 8px 10px;
+    border: 1px solid #C4D6DC;
+    border-radius: 0.25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+table.variations.table select:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+table.variations.table select:focus::-ms-value {
+    color: #495057;
+    background-color: #fff;
+}
+
+table.variations.table select:disabled {
+    color: #81969D;
+    background-color: #e9ecef;
+}
+
+
+/* -- input-placeholder -- */
+
+.form-control {
+  color: #81969D;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #81969D;
+  opacity: 1;
+}
+.form-control::-moz-placeholder {
+  color: #81969D;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #81969D;
+  opacity: 1;
+}
+.form-control::-ms-input-placeholder {
+  color: #81969D;
+  opacity: 1;
+}
+.form-control::placeholder {
+  color: #81969D;
+  opacity: 1;
+}
+
+/* -- search form -- */
+.woocommerce-product-search .fa.fa-search {
+    color: #81969D !important;
+}
+
+/* -- Buttons -- */
+.btn-outline-secondary {
+    color: #81969D;
+    border-color: #81969D;
+}
+.btn-outline-secondary:hover,
+.btn-outline-secondary:not(:disabled):not(.disabled).active,
+.btn-outline-secondary:not(:disabled):not(.disabled):active,
+.show>.btn-outline-secondary.dropdown-toggle {
+    color: #FFFFFF !important;
+    background-color: #81969D;
+    border-color: #81969D;
+}
+
+.btn-secondary {
+    color: #FFFFFF;
+    background-color: #81969D;
+    border-color: #81969D;
+}
+.btn-secondary:hover,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show>.btn-secondary.dropdown-toggle {
+    color: #FFFFFF;
+    background-color: #81969D;
+    border-color: #81969D;
+}
+
+/* woocommerce mini cart */
+.dropdown-menu.woocommerce-mini-cart .remove_from_cart_button {
+    border: 0.05rem solid #6c757d;
+}
+
+/* --- MENUS --- */
+
+.navbar-light .navbar-brand,
+body nav a,
+body nav a:hover {
+    color: #81969D;
+}
+
+/* fixed header menu */
+
+.site-header .fixed-top {
+-moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+-webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+/*@media only screen and (max-width: 991px) {}*/
+
+/* -- switch lang menu -- */
+
+.lang-item a{
+    color: #81969D;
+}
+.current-lang a{
+    color: #81969D;
+    text-decoration: underline;
+}
+
+/* ---- Single Product Colors --- */
+
+.single-product strong {
+    color: #81969D !important;
+}
+
+.single-product .woocommerce-Tabs-panel--description a,
+.single-product .woocommerce-product-details__short-description a{
+    color: #81969D !important;
+}
+
+.single-product .woocommerce-Tabs-panel--description a:hover,
+.single-product .woocommerce-product-details__short-description a:hover {
+    text-decoration: underline;
+}
+
+/* ---- HOME PAGE --- */
+
+#carouselExampleControls {
+    border-bottom: 0.4rem solid #C4D6DC;
+}
+
+.home .product-categories .product-category a:hover {
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.8);
+}
+.home .product-categories .product-category h3 {
+    opacity: 0.9;
+    color: #81969D !important;
+    padding: 0.5rem;
+}
+.home .product-categories .product-category a:hover h3{
+    opacity: 1;
+}
