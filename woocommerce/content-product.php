@@ -1,14 +1,13 @@
 <?php
 /**
  * The template for displaying product content within loops
- * @version     3.0.0
+ * @version     3.4.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+defined( 'ABSPATH' ) || exit;
 
 global $product;
+
 // Ensure visibility
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;

@@ -1,11 +1,9 @@
 <?php
 /**
  * Checkout Payment Section
- * @version     3.3.0
+ * @version     3.4.0
  */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 if ( ! is_ajax() ) {
 	do_action( 'woocommerce_review_order_before_payment' );
@@ -39,7 +37,7 @@ if ( ! is_ajax() ) {
 
 		<?php do_action( 'woocommerce_review_order_after_submit' ); ?>
 
-		<?php wp_nonce_field( 'woocommerce-process_checkout' ); ?>
+		<?php wp_nonce_field( 'woocommerce-process_checkout', 'woocommerce-process-checkout-nonce' ); ?>
 	</div>
 </div>
 <?php

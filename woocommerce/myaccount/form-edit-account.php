@@ -1,12 +1,10 @@
 <?php
 /**
  * Edit account form
- * @version 3.3.0
+ * @version 3.4.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_edit_account_form' ); ?>
 <form class="p-1 col-lg-9 woocommerce-EditAccountForm edit-account" action="" method="post">
@@ -56,4 +54,5 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 
 	<?php do_action( 'woocommerce_edit_account_form_end' ); ?>
 </form>
+
 <?php do_action( 'woocommerce_after_edit_account_form' ); ?>

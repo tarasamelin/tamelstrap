@@ -1,34 +1,29 @@
 <?php
 /**
  * The template for displaying product content in the single-product.php template
- * @version     3.0.0
+ * @version     3.4.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
+defined( 'ABSPATH' ) || exit;
 
+/**
+ * woocommerce_before_single_product hook.
+ *
+ * @hooked wc_print_notices - 10
+ */
+ do_action( 'woocommerce_before_single_product' );
+
+ if ( post_password_required() ) {
+    echo get_the_password_form(); // WPCS: XSS ok.
+    return;
+ }
 ?>
 
-<?php
-	/**
-	 * woocommerce_before_single_product hook.
-	 *
-	 * @hooked wc_print_notices - 10
-	 */
-	 do_action( 'woocommerce_before_single_product' );
-
-	 if ( post_password_required() ) {
-	 	echo get_the_password_form();
-	 	return;
-	 }
-?>
-
-<div id="product-<?php the_ID(); ?>" <?php post_class('row'); ?>>
-
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class('row'); ?>>
+    
 	<?php
 		/**
-		 * woocommerce_before_single_product_summary hook.
+		 * Hook: woocommerce_before_single_product_summary.
 		 *
 		 * @hooked woocommerce_show_product_sale_flash - 10
 		 * @hooked woocommerce_show_product_images - 20

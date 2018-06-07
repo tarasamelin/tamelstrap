@@ -1,12 +1,10 @@
 <?php
 /**
  * The Template for displaying product archives, including the main shop page which is a post type archive
- * @version     3.3.0
+ * @version     3.4.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 
@@ -33,9 +31,9 @@ do_action( 'woocommerce_before_main_content' );
 	//do_action( 'woocommerce_archive_description' );
 	?>
 <!--</header>-->
-<?php
 
-if ( have_posts() ) {
+<?php
+if ( woocommerce_product_loop() ) {
 
 	/**
 	 * Hook: woocommerce_before_shop_loop.
