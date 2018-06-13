@@ -158,6 +158,12 @@ input.input-text.qty.text {
     height: auto;
 }
 
+/* checkout page span wraper input fields FIX */
+body.woocommerce-checkout span.description,
+body.woocommerce-checkout span.woocommerce-input-wrapper {
+    width: 100%;
+}
+
 /* view cart link in catalog */
 a.button+a.added_to_cart.wc-forward {
     text-align: center;
