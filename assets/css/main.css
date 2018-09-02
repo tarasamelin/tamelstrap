@@ -8,6 +8,8 @@
 .popover,
 body {
     font-family: 'Circe-Regular', sans-serif;
+/*    font-family: 'OpenSans-Regular', sans-serif;*/
+/*    font-family: 'OpenSans-SemiBold', sans-serif;*/
     font-weight: normal;
     font-style: normal;
 }
@@ -23,6 +25,8 @@ body h4,
 body h5,
 body h6 {
     font-family: 'Circe-Regular', sans-serif;
+/*    font-family: 'OpenSans-Regular', sans-serif;*/
+/*    font-family: 'OpenSans-SemiBold', sans-serif;*/
     font-weight: normal;
     font-style: normal;
 }
@@ -43,7 +47,7 @@ button, a {
 /* woocommerce mini cart */
 .dropdown-menu.woocommerce-mini-cart {
     left: auto;
-    right: 0; 
+    right: 0;
 }
 /*
 li.nav-item a.cart-contents.dropdown-toggle::after {
@@ -79,6 +83,12 @@ header li.woocommerce-mini-cart-item a img{
 .site-header.fixed-top nav {
     padding-top: 0;
     padding-bottom: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    .mt72px {
+        margin-top: 72px !important ;
+    }
 }
 
 /* single-product gallery */
@@ -207,5 +217,15 @@ form.woocommerce-ordering select {
     font-size: 2.5rem;
 }
 
+/* ---- Pagination --- */
+.page-links.d-table span, .page-links.d-table a, .woocommerce-pagination span, .woocommerce-pagination a {
+    padding: 0.4rem 0.8rem;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+}
 
-
+.page-links.d-table span, .page-links.d-table a, .woocommerce-pagination span, .woocommerce-pagination a {
+    padding: 0.4rem 0.8rem;
+    margin-right: 0.2rem;
+    margin-left: 0.2rem;
+}

@@ -1,9 +1,9 @@
 # tamelstrap
 
-0.9.2 BETA developer edition
+0.9.3 BETA developer edition
 
 WordPress WooCommerce BootStrap4 Theme
 
 Incomplete project!
 
-# LIVE DEMO https://tamelstrap.woo.com.ua
+# live demo https://tamelstrap.woo.com.ua

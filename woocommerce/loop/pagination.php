@@ -20,7 +20,7 @@ if ( $total <= 1 ) {
 }
 
 ?>
-<nav class="d-table mx-auto mb-4 h5 woocommerce-pagination">
+<nav class="d-table mx-auto mb-4 mt-5 h5 woocommerce-pagination">
 	<?php
 		echo paginate_links( apply_filters( 'woocommerce_pagination_args', array( // WPCS: XSS ok.
 			'base'         => $base,

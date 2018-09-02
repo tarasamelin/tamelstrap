@@ -604,3 +604,125 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+/* OpenSans */
+@font-face {
+	font-family: 'OpenSans-Regular';
+	src: url('OpenSans/OpenSans-Regular/OpenSans-Regular.eot');
+	src: url('OpenSans/OpenSans-Regular/OpenSans-Regular.eot?#iefix')format('embedded-opentype'),
+		url('OpenSans/OpenSans-Regular/OpenSans-Regular.woff2') format('woff2'),
+		url('OpenSans/OpenSans-Regular/OpenSans-Regular.woff') format('woff'),
+		url('OpenSans/OpenSans-Regular/OpenSans-Regular.ttf') format('truetype'),
+        url('OpenSans/OpenSans-Regular/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans-Bold';
+	src: url('OpenSans/OpenSans-Bold/OpenSans-Bold.eot');
+	src: url('OpenSans/OpenSans-Bold/OpenSans-Bold.eot?#iefix')format('embedded-opentype'),
+		url('OpenSans/OpenSans-Bold/OpenSans-Bold.woff2') format('woff2'),
+		url('OpenSans/OpenSans-Bold/OpenSans-Bold.woff') format('woff'),
+		url('OpenSans/OpenSans-Bold/OpenSans-Bold.ttf') format('truetype'),
+        url('OpenSans/OpenSans-Bold/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans-BoldItalic';
+	src: url('OpenSans/OpenSans-BoldItalic/OpenSans-BoldItalic.eot');
+	src: url('OpenSans/OpenSans-BoldItalic/OpenSans-BoldItalic.eot?#iefix')format('embedded-opentype'),
+		url('OpenSans/OpenSans-BoldItalic/OpenSans-BoldItalic.woff2') format('woff2'),
+		url('OpenSans/OpenSans-BoldItalic/OpenSans-BoldItalic.woff') format('woff'),
+		url('OpenSans/OpenSans-BoldItalic/OpenSans-BoldItalic.ttf') format('truetype'),
+        url('OpenSans/OpenSans-BoldItalic/OpenSans-BoldItalic.svg#OpenSans-BoldItalic') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans-ExtraBold';
+	src: url('OpenSans/OpenSans-ExtraBold/OpenSans-ExtraBold.eot');
+	src: url('OpenSans/OpenSans-ExtraBold/OpenSans-ExtraBold.eot?#iefix')format('embedded-opentype'),
+		url('OpenSans/OpenSans-ExtraBold/OpenSans-ExtraBold.woff2') format('woff2'),
+		url('OpenSans/OpenSans-ExtraBold/OpenSans-ExtraBold.woff') format('woff'),
+		url('OpenSans/OpenSans-ExtraBold/OpenSans-ExtraBold.ttf') format('truetype'),
+        url('OpenSans/OpenSans-ExtraBold/OpenSans-ExtraBold.svg#OpenSans-ExtraBold') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans-ExtraBoldItalic';
+	src: url('OpenSans/OpenSans-ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot');
+	src: url('OpenSans/OpenSans-ExtraBoldItalic/OpenSans-ExtraBoldItalic.eot?#iefix')format('embedded-opentype'),
+		url('OpenSans/OpenSans-ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff2') format('woff2'),
+		url('OpenSans/OpenSans-ExtraBoldItalic/OpenSans-ExtraBoldItalic.woff') format('woff'),
+		url('OpenSans/OpenSans-ExtraBoldItalic/OpenSans-ExtraBoldItalic.ttf') format('truetype'),
+        url('OpenSans/OpenSans-ExtraBoldItalic/OpenSans-ExtraBoldItalic.svg#OpenSans-ExtraBoldItalic') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans-Italic';
+	src: url('OpenSans/OpenSans-Italic/OpenSans-Italic.eot');
+	src: url('OpenSans/OpenSans-Italic/OpenSans-Italic.eot?#iefix')format('embedded-opentype'),
+		url('OpenSans/OpenSans-Italic/OpenSans-Italic.woff2') format('woff2'),
+		url('OpenSans/OpenSans-Italic/OpenSans-Italic.woff') format('woff'),
+		url('OpenSans/OpenSans-Italic/OpenSans-Italic.ttf') format('truetype'),
+        url('OpenSans/OpenSans-Italic/OpenSans-Italic.svg#OpenSans-Italic') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans-Light';
+	src: url('OpenSans/OpenSans-Light/OpenSans-Light.eot');
+	src: url('OpenSans/OpenSans-Light/OpenSans-Light.eot?#iefix')format('embedded-opentype'),
+		url('OpenSans/OpenSans-Light/OpenSans-Light.woff2') format('woff2'),
+		url('OpenSans/OpenSans-Light/OpenSans-Light.woff') format('woff'),
+		url('OpenSans/OpenSans-Light/OpenSans-Light.ttf') format('truetype'),
+        url('OpenSans/OpenSans-Light/OpenSans-Light.svg#OpenSans-Light') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans-LightItalic';
+	src: url('OpenSans/OpenSans-LightItalic/OpenSans-LightItalic.eot');
+	src: url('OpenSans/OpenSans-LightItalic/OpenSans-LightItalic.eot?#iefix')format('embedded-opentype'),
+		url('OpenSans/OpenSans-LightItalic/OpenSans-LightItalic.woff2') format('woff2'),
+		url('OpenSans/OpenSans-LightItalic/OpenSans-LightItalic.woff') format('woff'),
+		url('OpenSans/OpenSans-LightItalic/OpenSans-LightItalic.ttf') format('truetype'),
+        url('OpenSans/OpenSans-LightItalic/OpenSans-LightItalic.svg#OpenSans-LightItalic') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans-SemiBold';
+	src: url('OpenSans/OpenSans-SemiBold/OpenSans-SemiBold.eot');
+	src: url('OpenSans/OpenSans-SemiBold/OpenSans-SemiBold.eot?#iefix')format('embedded-opentype'),
+		url('OpenSans/OpenSans-SemiBold/OpenSans-SemiBold.woff2') format('woff2'),
+		url('OpenSans/OpenSans-SemiBold/OpenSans-SemiBold.woff') format('woff'),
+		url('OpenSans/OpenSans-SemiBold/OpenSans-SemiBold.ttf') format('truetype'),
+        url('OpenSans/OpenSans-SemiBold/OpenSans-SemiBold.svg#OpenSans-SemiBold') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'OpenSans-SemiBoldItalic';
+	src: url('OpenSans/OpenSans-SemiBoldItalic/OpenSans-SemiBoldItalic.eot');
+	src: url('OpenSans/OpenSans-SemiBoldItalic/OpenSans-SemiBoldItalic.eot?#iefix')format('embedded-opentype'),
+		url('OpenSans/OpenSans-SemiBoldItalic/OpenSans-SemiBoldItalic.woff2') format('woff2'),
+		url('OpenSans/OpenSans-SemiBoldItalic/OpenSans-SemiBoldItalic.woff') format('woff'),
+		url('OpenSans/OpenSans-SemiBoldItalic/OpenSans-SemiBoldItalic.ttf') format('truetype'),
+        url('OpenSans/OpenSans-SemiBoldItalic/OpenSans-SemiBoldItalic.svg#OpenSans-SemiBoldItalic') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}

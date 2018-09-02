@@ -39,6 +39,7 @@ require_once get_template_directory().'/inc/aq_resizer.php';
  */
 require_once get_template_directory().'/shortcodes/tml-gallery.php';
 //require_once get_template_directory().'/shortcodes/tml-gallery2.php';
+/* carousel incomplete */
 //require_once get_template_directory().'/shortcodes/tml-items-carousel.php';
 
 /*
@@ -51,6 +52,7 @@ require_once get_template_directory().'/shortcodes/tml-contact-form.php';
  */
 require_once get_template_directory().'/shortcodes/tml-google-map.php';
 //require_once get_template_directory().'/shortcodes/tml-google-map2.php';
+//require_once get_template_directory().'/shortcodes/tml-google-map2-markers.php';
 
 /*
  * Shortcode Socila Share
