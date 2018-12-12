@@ -1,6 +1,6 @@
 # tamelstrap
 
-0.9.3 BETA developer edition
+0.9.4 BETA developer edition
 
 WordPress WooCommerce BootStrap4 Theme
 
