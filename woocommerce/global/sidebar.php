@@ -7,7 +7,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
-?>
-<div id="secondary" class="widget-area col-lg-3 col-md-4">
+?> 
+<div id="secondary" class="widget-area col-lg-3 col-md-4 <?php if( is_product() ){echo 'order-last order-md-first ';} ?>">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
 </div><!-- #secondary --><!-- col -->

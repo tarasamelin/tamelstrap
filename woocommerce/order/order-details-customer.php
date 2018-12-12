@@ -1,7 +1,7 @@
 <?php
 /**
  * Order Customer Details
- * @version 3.3.0
+ * @version 3.4.4
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -37,7 +37,7 @@ $show_shipping = ! wc_ship_to_billing_address_only() && $order->needs_shipping_a
 		</div><!-- /.col-1 -->
 
 		<div class="woocommerce-column woocommerce-column--2 woocommerce-column--shipping-address">
-			<h2 class="woocommerce-column__title"><?php _e( 'Shipping address', 'woocommerce' ); ?></h2>
+			<h2 class="woocommerce-column__title"><?php esc_html_e( 'Shipping address', 'woocommerce' ); ?></h2>
 			<address  class="p-2 border">
 				<?php echo wp_kses_post( $order->get_formatted_shipping_address( __( 'N/A', 'woocommerce' ) ) ); ?>
 			</address>
@@ -46,5 +46,8 @@ $show_shipping = ! wc_ship_to_billing_address_only() && $order->needs_shipping_a
 	</section><!-- /.col2-set -->
 
 	<?php endif; ?>
-
+    
+<!--new 3.4.4    -->
+<?php do_action( 'woocommerce_order_details_after_customer_details', $order ); ?>
+    
 </section>

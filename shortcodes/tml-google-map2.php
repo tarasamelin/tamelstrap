@@ -1,9 +1,7 @@
 <?php
 /**
  * [map zoom="15" lat="49.8252481" lng="23.9590636" marker1lat="49.827766" marker1lng="23.951339" marker1title="МАГАЗИН Колірбур, м. Львів, вул. Городоцька, 224" marker2lat="49.8214278" marker2lng="23.9696201" marker2title="САЛОН Колірбуд, м.Львів, вул.Любінська,104"]
- * Googel Map API KEY - AIzaSyATHZGwZUPxAsYkjONt_WKza9-ad-90amg
- * Googel Static Map API KEY - AIzaSyDD9DzlVLAm0_t7eA6BkHvHbu1HU4ncUu0
- * new google map js api AIzaSyC1d-FtX6E4pTcAvS-gkrIpyIFiqZa2Eoc
+ * google map js api AIzaSyC1d-FtX6E4pTcAvS-gkrIpyIFiqZa2Eoc
 **/
 
 add_shortcode( 'map2', 'tml_map2' );

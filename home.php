@@ -5,7 +5,6 @@
  
 get_header(); ?>
 
-<?php get_template_part( 'template-parts/breadcrumbs'); ?>
 <div class="row">
 
     <?php get_sidebar(); ?>

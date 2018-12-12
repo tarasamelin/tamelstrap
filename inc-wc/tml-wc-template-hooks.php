@@ -40,7 +40,8 @@ add_action( 'woocommerce_before_shop_loop', 'tml_woocommerce_before_shop_loop_ro
  * woocommerce_breadcrumb()
  */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
-add_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 5, 0 );
+//add_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 5, 0 );
+add_action( 'tml_woocommerce_breadcrumbs_full_width', 'woocommerce_breadcrumb', 5, 0 );
 
 /**
  * Remove WooCommerce Sidebar Hook
@@ -52,14 +53,28 @@ remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
  */
 add_action( 'get_header', 'tml_add_wc_sidebar' );
 function tml_add_wc_sidebar() {
-    if( !is_product() ){
+//    if( !is_product() ){
         add_action( 'woocommerce_before_main_content', 'tml_row_open', 8 );
         add_action( 'woocommerce_before_main_content', 'woocommerce_get_sidebar', 9 );
         remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
         add_action( 'woocommerce_before_main_content', 'tml_woocommerce_output_content_wrapper_with_sidebar', 10 );
         add_action( 'woocommerce_after_main_content', 'tml_row_close', 11 );
+//    }
+}
+
+/**
+ * Full width related product under single product
+ */
+add_action( 'get_header', 'tml_full_width_related_products' );
+function tml_full_width_related_products() {
+    if( is_product() ){
+        remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+        remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+        add_action( 'woocommerce_after_main_content', 'woocommerce_upsell_display', 12 );
+        add_action( 'woocommerce_after_main_content', 'woocommerce_output_related_products', 13 );
     }
 }
+
 
 /**
  * Replace Output the product tabs.
@@ -98,7 +113,21 @@ add_filter( 'woocommerce_add_to_cart_fragments', 'tml_cart_link_fragment');
  */
 add_action( 'tml_header_cart', 'tml_cart_link' );
 
-
+/**
+ * Remove Option from WooCommerce Ordering - OrderBy in Catalog
+**/
+add_filter( 'woocommerce_catalog_orderby', 'tml_filter_woocommerce_catalog_orderby', 10, 1 ); 
+function tml_filter_woocommerce_catalog_orderby( $array ) {
+    $array = array(
+			'menu_order' => __( 'Default sorting', 'woocommerce' ),
+//			'popularity' => __( 'Sort by popularity', 'woocommerce' ),
+//			'rating'     => __( 'Sort by average rating', 'woocommerce' ),
+			'date'       => __( 'Sort by newness', 'woocommerce' ),
+			'price'      => __( 'Sort by price: low to high', 'woocommerce' ),
+			'price-desc' => __( 'Sort by price: high to low', 'woocommerce' ),
+		);
+    return $array; 
+}
 
 
 

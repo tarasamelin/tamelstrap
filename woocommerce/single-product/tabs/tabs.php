@@ -14,7 +14,7 @@ $tabs = apply_filters( 'woocommerce_product_tabs', array() );
 
 if ( ! empty( $tabs ) ) : ?>
 
-	<div class="woocommerce-tabs wc-tabs-wrapper pl-3 w-100 col-xl-10">
+	<div class="woocommerce-tabs wc-tabs-wrapper w-100 container-fluid">
 		<ul class="tabs wc-tabs nav nav-tabs" role="tablist">
 			<?php foreach ( $tabs as $key => $tab ) : ?>
 				<li class="<?php echo esc_attr( $key ); ?>_tab nav-item nav-link rounded-0" id="tab-title-<?php echo esc_attr( $key ); ?>" role="tab" aria-controls="tab-<?php echo esc_attr( $key ); ?>">

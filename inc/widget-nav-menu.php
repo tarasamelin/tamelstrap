@@ -38,7 +38,7 @@ class Sidebar_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$classes[] = ( $args->walker->has_children ) ? '' : '';
 		$classes[] = ( $item->current || $item->current_item_ancestor ) ? 'active' : '';
 		$classes[] = 'menu-item-' . $item->ID;
-		$classes[] = ( $depth==0 ) ? 'rounded-0 p-0 list-group-item bg-white border' : 'rounded-0 p-0 list-group-item bg-light border border-left-0 border-right-0 border-bottom-0';
+		$classes[] = ( $depth==0 ) ? 'rounded-0 p-0 list-group-item bg-white border-0' : 'rounded-0 p-0 list-group-item bg-light border-0';
 		
 		$class_names =  join(' ', apply_filters('nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 		$class_names = ' class="' . esc_attr($class_names) . '"';
@@ -56,11 +56,11 @@ class Sidebar_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$attributes .= ( $args->walker->has_children ) ? 'class="nav-link text-secondary"' : 'class="nav-link text-secondary"'; 
 		
 		$item_output = $args->before;
-		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<div class="btn-group w-100"><button class="btn bg-white w-100 text-left p-0 rounded-0" type="button"><a' . $attributes . ' itemprop="url">' : '<a' . $attributes . ' itemprop="url">';
+		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<div class="btn-group w-100"><button class="btn border-0 bg-white w-100 text-left p-0 rounded-0" type="button"><a' . $attributes . ' itemprop="url">' : '<a' . $attributes . ' itemprop="url">';
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '</a></button>' : '</a>';
         
-		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<button class="rounded-0 border-0 pl-3 pr-3 bg-white" type="button" data-toggle="collapse" data-target="#collapse-id-'.$item->ID.'" aria-expanded="false" aria-controls="collapseExample" ><i class="text-secondary fa fa-plus-circle" aria-hidden="true"></i></button></div><ul class="collapse pl-0" id="collapse-id-'.$item->ID.'">' : '';
+		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<button class="border-0 rounded-0 border-0 pl-3 pr-3 bg-white" type="button" data-toggle="collapse" data-target="#collapse-id-'.$item->ID.'" aria-expanded="false" aria-controls="collapseExample" ><i class="text-secondary fas fa-plus-circle" aria-hidden="true"></i></button></div><ul class="collapse pl-0" id="collapse-id-'.$item->ID.'">' : '';
 		$item_output .= $args->after;
 		$output .= apply_filters ( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 }

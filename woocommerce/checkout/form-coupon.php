@@ -1,12 +1,12 @@
 <?php
 /**
  * Checkout coupon form
- * @version     3.4.0
+ * @version     3.4.4
  */
 
 defined( 'ABSPATH' ) || exit;
 
-if ( ! wc_coupons_enabled() || ! empty( WC()->cart->applied_coupons ) ) { // @codingStandardsIgnoreLine.
+if ( ! wc_coupons_enabled() ) { // @codingStandardsIgnoreLine.
 	return;
 }
 

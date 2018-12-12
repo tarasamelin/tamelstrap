@@ -4,7 +4,7 @@ class Primary_Walker_Nav_Menu extends Walker_Nav_Menu {
 	function start_lvl( &$output, $depth = 0, $args = array() ){ //ul
 		$indent = str_repeat("\t",$depth);
 		$submenu = ($depth > 0) ? ' dropdown-submenu' : '';
-		$output .= "\n$indent<ul class=\"rounded-0 px-3 py-lg-0 px-lg-0 dropdown-menu$submenu depth_$depth\">\n";
+		$output .= "\n$indent<ul class=\"text-right text-lg-left bg-white rounded-0 px-3 py-lg-0 px-lg-0 dropdown-menu$submenu depth_$depth\">\n";
 	}
 	
 //  START ELEMENT   
@@ -42,16 +42,17 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ){
 		$attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-secondary" data-toggle="dropdown"' : ' class="nav-link text-secondary"'; 
         }
         else {
-        $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-secondary w-100 d-flex justify-content-between data-toggle="dropdown"' : ' class="nav-link text-secondary"'; 
+//        $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-secondary w-100 d-flex justify-content-between" data-toggle="dropdown"' : ' class="nav-link text-secondary"'; 
+        $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-secondary w-100 d-inline-block d-lg-flex justify-content-between"' : ' class="nav-link text-secondary"'; 
         }
 		$item_output = $args->before;
 		$item_output .= '<a ' . $attributes . ' itemprop="url">';
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
         if ( $depth == 0 ){
-		$item_output .= ( $args->walker->has_children ) ? ' <i class="ml-1 fa fa-angle-down" aria-hidden="true"></i></a>' : '</a>';
+		$item_output .= ( $args->walker->has_children ) ? ' <i class="ml-1 fas fa-angle-down" aria-hidden="true"></i></a>' : '</a>';
         }
         else {
-		$item_output .= ( $args->walker->has_children ) ? ' <i class="d-none d-sm-inline fa fa-angle-right" aria-hidden="true"></i></a>' : '</a>';
+		$item_output .= ( $args->walker->has_children ) ? ' <i class="pl-3 pt-1 d-none d-sm-inline fas fa-angle-right" aria-hidden="true"></i></a>' : '</a>';
         }
 		$item_output .= $args->after;
 		

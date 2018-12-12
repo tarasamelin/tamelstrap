@@ -31,7 +31,7 @@ defined( 'ABSPATH' ) || exit;
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
-	<div class="summary entry-summary col-sm-12 col-md-6 col-lg-7 col-xl-7 mb-4 mb-md-1">
+	<div class="summary entry-summary col-md-12 col-lg-6 mb-4 mb-md-1">
 
 		<?php
 			/**

@@ -1,4 +1,20 @@
+
+/*Lato*/
+
+@font-face {
+    font-family: 'Lato-Medium';
+    src: url('Lato-Medium/Lato-Medium.eot');
+    src: url('Lato-Medium/Lato-Medium.eot?#iefix') format('embedded-opentype'),
+         url('Lato-Medium/Lato-Medium.woff2') format('woff2'),
+         url('Lato-Medium/Lato-Medium.woff') format('woff'),
+         url('Lato-Medium/Lato-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
 /*Circe*/
+/*
 @font-face {
 	font-family: 'Circe-Regular';
 	src: url('Circe-Regular/Circe-Regular.eot');
@@ -9,6 +25,7 @@
 	font-style: normal;
 	font-weight: normal;
 }
+*/
 
 /*WooCommerce Fonts*/
 @font-face {

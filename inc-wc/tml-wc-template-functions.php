@@ -82,8 +82,8 @@ function tml_woocommerce_before_shop_loop_col_close() {
  */
 function woocommerce_breadcrumb( $args = array() ) {
     $args = wp_parse_args( $args, apply_filters( 'woocommerce_breadcrumb_defaults', array(
-        'delimiter'   => '&nbsp;&#47;&nbsp;',
-        'wrap_before' => '<nav class="pt-2 pb-2 mb-3 border border-right-0 border-left-0 border-top-0 woocommerce-breadcrumb">',
+        'delimiter'   => '<span class="delimiter">&nbsp;&#47;&nbsp;</span>',
+        'wrap_before' => '<nav class="text-center pt-2 pb-2 mb-3 woocommerce-breadcrumb">',
         'wrap_after'  => '</nav>',
         'before'      => '',
         'after'       => '',
@@ -174,7 +174,7 @@ function woocommerce_demo_store() {
         $notice = __( 'This is a demo store for testing purposes &mdash; no orders shall be fulfilled.', 'woocommerce' );
     }
 
-    echo apply_filters( 'woocommerce_demo_store', '<div class="border bg-light"><p class="container p-2 pb-4 pt-4 mb-0 text-left text-secondary woocommerce-store-notice demo_store">' . wp_kses_post( $notice ) . ' <a href="#" class="woocommerce-store-notice__dismiss-link"><i class="fa fa-times-circle-o" aria-hidden="true"></i></a></p><div>', $notice ); // WPCS: XSS ok.
+    echo apply_filters( 'woocommerce_demo_store', '<div class="border bg-light"><p class="container p-2 pb-4 pt-4 mb-0 text-left text-secondary woocommerce-store-notice demo_store">' . wp_kses_post( $notice ) . ' <a href="#" class="woocommerce-store-notice__dismiss-link"><i class="fas fa-times-circle-o" aria-hidden="true"></i></a></p><div>', $notice ); // WPCS: XSS ok.
 }		
 
 

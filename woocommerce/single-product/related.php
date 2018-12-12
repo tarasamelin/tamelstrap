@@ -10,9 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $related_products ) : ?>
 
-	<section class="related products container">
-
-		<h2><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+	<section class="related products">
+		<h2 class="text-center text-lg-left"><?php esc_html_e( 'Related products', 'woocommerce' ); ?></h2>
+        <hr>
 
 		<?php woocommerce_product_loop_start(); ?>
 

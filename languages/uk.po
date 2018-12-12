@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2018-09-02 11:34+0300\n"
+"PO-Revision-Date: 2018-12-08 10:47+0200\n"
 "Language-Team: \n"
 "X-Generator: Poedit 2.0.8\n"
 "Last-Translator: \n"
@@ -16,5 +16,53 @@ msgstr ""
 "Language: uk\n"
 
 #: wp-content/themes/tamelstrap/function.php:10
-msgid "bla bla bla"
-msgstr "бла бла бла"
+msgid "Telephone"
+msgstr "Телефон"
+
+#: wp-content/themes/tamelstrap/function.php:10
+msgid "Message"
+msgstr "Ваше повідомлення"
+
+#: wp-content/themes/tamelstrap/function.php:10
+msgid "Send"
+msgstr "Надіслати"
+
+#: wp-content/themes/tamelstrap/function.php:10
+msgid "Letter subject"
+msgstr "Тема повідомлення"
+
+#: wp-content/themes/tamelstrap/function.php:10
+msgid "the letter was sent via the contact form"
+msgstr "лист був відправлений через контактну форму"
+
+#: wp-content/themes/tamelstrap/function.php:10
+msgid "slides"
+msgstr "слайди"
+
+#: wp-content/themes/tamelstrap/function.php:10
+msgid "slide"
+msgstr "слайд"
+
+#: wp-content/themes/tamelstrap/function.php:10
+msgid "slider"
+msgstr "слайдер"
+
+#: wp-content/themes/tamelstrap/function.php:10
+msgid "all slides"
+msgstr "всі слайди"
+
+#: wp-content/themes/tamelstrap/function.php:10
+msgid "add new slide"
+msgstr "додати новий слайд"
+
+#: wp-content/themes/tamelstrap/function.php:10
+msgid "new slide"
+msgstr "новий слайд"
+
+#: wp-content/themes/tamelstrap/function.php:10
+msgid "sliders"
+msgstr "слайдери"
+
+#: wp-content/themes/tamelstrap/function.php:10
+msgid "Shipping Adress"
+msgstr "Адреса доставки"

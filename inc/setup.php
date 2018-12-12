@@ -35,7 +35,7 @@ function tml_add_theme_support() {
     load_theme_textdomain( 'tml-base-theme', get_template_directory() . '/languages' );
 	add_theme_support( 'custom-logo', array(
 		'height'      => 45,
-		'width'       => 235,
+		'width'       => 180,
 		'flex-height' => true,
 	) );
 }
@@ -62,6 +62,7 @@ add_action( 'after_setup_theme', 'woocommerce_support' );
 function tml_register_nav_menus() {  
 	register_nav_menus( array(
 		'primary-menu' => 'Primary Menu',
+        'polylang-menu' => 'Polylang Menu',
 	) );
 }
 add_action( 'after_setup_theme', 'tml_register_nav_menus' );
@@ -99,7 +100,33 @@ function tml_widgets_init() {
 		'before_title'  => '',
 		'after_title'   => '',
 	) );
+    register_sidebar( array(
+		'name'          => 'Header top text left',
+		'id'            => 'top-header-col-1',
+		'description'   => 'Add text widgets here.',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
+    register_sidebar( array(
+		'name'          => 'Header top text right',
+		'id'            => 'top-header-col-2',
+		'description'   => 'Add text widgets here.',
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
+	) );
 }
 add_action( 'widgets_init', 'tml_widgets_init' );
 
-
+/**
+ *
+ * Custome Fields Support for CPT Slide
+ *
+**/
+function slide_custom_fields() {
+	add_post_type_support( 'tml-slide', 'custom-fields');
+}
+add_action('init', 'slide_custom_fields');

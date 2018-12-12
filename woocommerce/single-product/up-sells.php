@@ -10,10 +10,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $upsells ) : ?>
 
-	<section class="up-sells upsells products container">
-
-		<h2><?php esc_html_e( 'You may also like&hellip;', 'woocommerce' ) ?></h2>
-
+	<section class="up-sells upsells products">
+		<h2 class="text-center text-lg-left"><?php esc_html_e( 'You may also like&hellip;', 'woocommerce' ) ?></h2>
+        <hr>
+        
 		<?php woocommerce_product_loop_start(); ?>
 
 			<?php foreach ( $upsells as $upsell ) : ?>

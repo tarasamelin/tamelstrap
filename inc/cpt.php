@@ -12,10 +12,13 @@ function tml_cpt_slide() {
         'menu_position' =>120,
         'menu_icon' => admin_url() . 'images/media-button-other.gif' ,
         'labels' => array(
-            'name' => 'Slide',
-            'all_items' => 'All Slides',
-            'add_new' => 'Add new Slide',
-            'add_new_item' => 'New Slide'
+            'name' => __( 'slides', 'tamelstrap' ),
+            'singular_name' => __( 'slide', 'tamelstrap' ),
+            'menu_name'     => __( 'slider', 'tamelstrap' ),
+            'all_items' => __( 'all slides', 'tamelstrap' ),
+            'add_new' => __( 'add new slide', 'tamelstrap' ),
+            'add_new_item' => __( 'new slide', 'tamelstrap' )
+            
             )
     ));
 }
@@ -26,7 +29,7 @@ function tml_register_taxonomy() {
 		'tml-slider',
 		'tml-slide',
 		array(
-			'label' => __( 'slider' ),
+			'label' => __( 'sliders', 'tamelstrap' ),
 			'rewrite' => array( 'slug' => 'tml-slider' ),
 			'hierarchical' => true,
 		)
