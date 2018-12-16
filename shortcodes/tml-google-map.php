@@ -1,7 +1,5 @@
 <?php
 /**
- * Shortcode Google map [map center="" width="600" height="300" zoom="13"]
- * google map js api AIzaSyC1d-FtX6E4pTcAvS-gkrIpyIFiqZa2Eoc
 **/
 
 add_shortcode( 'map', 'tml_map' );
