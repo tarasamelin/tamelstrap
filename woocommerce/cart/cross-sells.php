@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 if ( $cross_sells ) : ?>
 <hr>
-	<div class="mt-4 container text-secondary border cross-sells">
+	<div class="mt-4 container-fluid text-secondary cross-sells">
 
 		<h2 class="h4"><?php _e( 'You may be interested in&hellip;', 'woocommerce' ) ?></h2>
 

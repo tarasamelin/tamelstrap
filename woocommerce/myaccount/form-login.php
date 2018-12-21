@@ -2,18 +2,14 @@
 /**
  * Login Form
  *
- * @version 3.4.0
+ * @version 3.5.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-?>
-
-<?php wc_print_notices(); ?>
-
-<?php do_action( 'woocommerce_before_customer_login_form' ); ?>
+do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 <?php if ( get_option( 'woocommerce_enable_myaccount_registration' ) === 'yes' ) : ?>
 
@@ -25,6 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<h2><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
 <div class="row">
+
 		<form class="col-sm-8 col-md-5 col-lg-3 woocommerce-form woocommerce-form-login login" method="post">
 
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
@@ -87,7 +84,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<p class="form-group woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 					<label for="reg_password"><?php esc_html_e( 'Password', 'woocommerce' ); ?> <span class="required">*</span></label>
-					<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password" />
+					<input type="password" class="woocommerce-Input woocommerce-Input--text input-text" name="password" id="reg_password"  autocomplete="new-password" />
 				</p>
 
 			<?php endif; ?>

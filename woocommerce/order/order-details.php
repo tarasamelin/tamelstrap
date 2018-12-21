@@ -1,7 +1,7 @@
 <?php
 /**
  * Order details
- * @version 3.3.0
+ * @version 3.5.2
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -62,7 +62,7 @@ if ( $show_downloads ) {
 					?>
 					<tr>
 						<th scope="row"><?php echo $total['label']; ?></th>
-						<td><?php echo $total['value']; ?></td>
+						<td><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : $total['value']; ?></td>
 					</tr>
 					<?php
 				}

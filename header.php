@@ -61,7 +61,7 @@
                     'container'       => '', 
 //                    'container_class' => '',
 //                    'container_id'    => '',
-                    'menu_class' => 'navbar-nav',
+                    'menu_class' => 'navbar-nav text-right',
                     'walker' => new Primary_Walker_Nav_Menu()
                     ) );
                 }?>

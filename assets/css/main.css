@@ -273,6 +273,21 @@ span.onsale {
     margin-left: 15px;
 }
 
+/* view cart link in catalog */
+a.added+a.added_to_cart.wc-forward {
+    padding: 0.25rem;
+    margin: 0.25rem auto; 
+    text-align: center;
+/*    display: inline-block !important;*/
+    display: table;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+
+a.product_type_simple.add_to_cart_button.ajax_add_to_cart.added {
+/*    display: inline-block !important;*/
+}
+
 /* ------------------------------------------- */
 /* ----------- CATALOG END ------------------- */
 /* ------------------------------------------- */
@@ -371,12 +386,6 @@ input.input-text.qty.text {
     height: auto;
 }
 
-/* view cart link in catalog */
-a.button+a.added_to_cart.wc-forward {
-    text-align: center;
-    display: block;
-}
-
 /* ------------------------------------------- */
 /* ----------- CART PAGES END ---------------- */
 /* ------------------------------------------- */
@@ -389,6 +398,10 @@ a.button+a.added_to_cart.wc-forward {
 body.woocommerce-checkout span.description,
 body.woocommerce-checkout span.woocommerce-input-wrapper {
     width: 100%;
+}
+abbr[data-original-title],
+abbr[title] {
+    text-decoration: none;
 }
 
 /* ------------------------------------------- */
@@ -428,6 +441,9 @@ ol.comment-list {
     bottom: 5rem;
     right: 1rem;
     font-size: 2.5rem;
+}
+a.totopbtn i {
+    font-size: 2.5rem!important;
 }
 
 /* ------------------------------------------- */

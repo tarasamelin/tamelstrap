@@ -1,12 +1,13 @@
 <?php
 /**
  * Edit account form
- * @version 3.4.0
+ * @version 3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_edit_account_form' ); ?>
+
 <form class="p-1 col-lg-9 woocommerce-EditAccountForm edit-account" action="" method="post">
 
 	<?php do_action( 'woocommerce_edit_account_form_start' ); ?>
@@ -20,6 +21,12 @@ do_action( 'woocommerce_before_edit_account_form' ); ?>
 		<input type="text" class="form-control rounded-0 woocommerce-Input woocommerce-Input--text input-text" name="account_last_name" id="account_last_name" value="<?php echo esc_attr( $user->last_name ); ?>" />
 	</p>
 	<div class="clear"></div>
+
+	<p class="form-group woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+		<label for="account_display_name"><?php esc_html_e( 'Display name', 'woocommerce' ); ?>&nbsp;<span class="required">*</span></label>
+		<input type="text" class="form-control rounded-0 woocommerce-Input woocommerce-Input--text input-text" name="account_display_name" id="account_display_name" value="<?php echo esc_attr( $user->display_name ); ?>" /> <span><em><?php esc_html_e( 'This will be how your name will be displayed in the account section and in reviews', 'woocommerce' ); ?></em></span>
+	</p>
+	<div class="clear"></div>  
 
 	<p class="form-group woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
 		<label for="account_email"><?php esc_html_e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>

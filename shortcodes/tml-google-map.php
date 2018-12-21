@@ -1,5 +1,7 @@
 <?php
 /**
+ * Shortcode Google map [map center="" width="600" height="300" zoom="13"]
+ * google map js api 111111111111111111111111111111111111111
 **/
 
 add_shortcode( 'map', 'tml_map' );
@@ -15,7 +17,7 @@ function tml_map($atts){
 			'zoom' => 16,
 			'enablescrollwheel' => false,
 			'disablecontrols' => false,
-			'key' => 'AIzaSyC1d-FtX6E4pTcAvS-gkrIpyIFiqZa2Eoc'
+			'key' => '111111111111111111111111111111111111111'
 		), $atts );
     extract( $atts );
     $tml_map_array = array(

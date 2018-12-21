@@ -74,7 +74,7 @@ foreach($order_shipping as $field) {
 //     unset($fields['billing']['billing_last_name']);
      unset($fields['billing']['billing_company_name']);
 //     unset($fields['billing']['billing_address_1']);
-//     unset($fields['billing']['billing_address_2']);
+     unset($fields['billing']['billing_address_2']);
      unset($fields['billing']['billing_city']);
      unset($fields['billing']['billing_postcode']);
      unset($fields['billing']['billing_country']);
@@ -114,7 +114,7 @@ foreach($order_shipping as $field) {
 //$fields['billing']['billing_first_name']['label'] = '';
 //$fields['billing']['billing_last_name']['label'] = '';
 //$fields['billing']['billing_company_name']['label'] = '';
-//$fields['billing']['billing_address_1']['label'] = '';
+$fields['billing']['billing_address_1']['label'] = __( 'Shipping Adress', 'tamelstrap' );
 //$fields['billing']['billing_address_2']['label'] = '';
 //$fields['billing']['billing_city']['label'] = '';
 //$fields['billing']['billing_postcode']['label'] = '';
@@ -128,7 +128,7 @@ foreach($order_shipping as $field) {
 //$fields['billing']['billing_last_name']['placeholder'] = '';
 //$fields['billing']['billing_company_name']['placeholder'] = '';
 $fields['billing']['billing_address_1']['placeholder'] = '';
-$fields['billing']['billing_address_2']['placeholder'] = '';
+//$fields['billing']['billing_address_2']['placeholder'] = '';
 //$fields['billing']['billing_city']['placeholder'] = '';
 //$fields['billing']['billing_postcode']['placeholder'] = '';
 //$fields['billing']['billing_country']['placeholder'] = '';
@@ -137,11 +137,11 @@ $fields['billing']['billing_address_2']['placeholder'] = '';
 //$fields['billing']['billing_phone']['placeholder'] = '';
 
 /* Required billing */
-$fields['billing']['billing_first_name']['required'] = false;
-$fields['billing']['billing_last_name']['required'] = false;
+//$fields['billing']['billing_first_name']['required'] = false;
+//$fields['billing']['billing_last_name']['required'] = false;
 //$fields['billing']['billing_company_name']['required'] = false;
-$fields['billing']['billing_address_1']['required'] = false;
-$fields['billing']['billing_address_2']['required'] = false;
+//$fields['billing']['billing_address_1']['required'] = false;
+//$fields['billing']['billing_address_2']['required'] = false;
 //$fields['billing']['billing_city']['required'] = false;
 //$fields['billing']['billing_postcode']['required'] = false;
 //$fields['billing']['billing_country']['required'] = false;

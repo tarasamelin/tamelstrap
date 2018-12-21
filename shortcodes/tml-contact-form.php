@@ -23,16 +23,15 @@ add_shortcode( 'contact-form', 'tml_contact_form_sc' );
 function tml_contact_form_sc( $atts ) {
 	extract( shortcode_atts( array(
 		"email" => get_bloginfo( 'admin_email' ),
-		"subject" => '',
+		"subject" => __( 'the letter was sent via the contact form', 'tamelstrap' ),
 		"label_name" => __( 'Name' ),
 		"label_email" => __( 'Email' ),
-		"label_phone" => 'tel',
-		"label_subject" => __( 'Title:' ),
-		"label_message" => __( 'Text' ),
-		"label_submit" => __( 'Next' ),
+		"label_phone" => __( 'Telephone', 'tamelstrap' ),
+		"label_message" => __( 'Message', 'tamelstrap' ),
+		"label_submit" => __( 'Send', 'tamelstrap' ),
 		"error_empty" => __( '<strong>ERROR</strong>: please fill the required fields (name, email).' ),
 		"error_noemail" => __( 'Please enter a valid email address.' ),
-		"success" => 'OK!'
+		"success" => __( '<span class="text-success h3">Thank you for your message! We will contact you shortly.</span>', 'tamelstrap' ),
 	), $atts ) );
 
 	if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
@@ -60,7 +59,7 @@ function tml_contact_form_sc( $atts ) {
 		}
 
 		if ( $error == false ) {
-			$email_subject = "[" . get_bloginfo('name') . "] " . $form_data['subject'];
+			$email_subject = "[" . get_bloginfo('name') . "] " . $subject ;
 			$email_message = "IP: " . tml_get_the_ip(). "\n\n";
 			$email_message .= "Subject: " . $form_data['subject'] . "\n\n";
 			$email_message .= "Name: " .$form_data['your_name'] . "\n\n";
@@ -79,7 +78,7 @@ function tml_contact_form_sc( $atts ) {
 	if( $result != "" ) {
 		$info = '<div class="info">'.$result.'</div>';
 	}
-	$email_form = '<div class="row"><form class="col-md-8 contact-form" method="post" action="'.get_permalink().'">
+	$email_form = '<form class="contact-form" method="post" action="'.get_permalink().'">
 		<div class="form-group mb-2">
 			<label class="text-secondary mb-0" for="cf_name">'.$label_name.':</label>
 			<input class="form-control rounded-0" id="cf_name" name="your_name" type="text" size="50" maxlength="50" value="'.$form_data['your_name'].'" />
@@ -93,17 +92,13 @@ function tml_contact_form_sc( $atts ) {
 			<input class="form-control rounded-0" id="cf_email" name="phone" type="text" size="50" maxlength="50" value="'.$form_data['phone'].'" />
 		</div>
 		<div class="form-group mb-2">
-			<label class="text-secondary mb-0" for="cf_subject">'.$label_subject.'</label>
-			<input class="form-control rounded-0" id="cf_subject" name="subject" type="text" size="50" maxlength="50" value="'.$subject.$form_data['subject'].'" />
-		</div>
-		<div class="form-group mb-2">
 			<label class="text-secondary mb-0" for="cf_message">'.$label_message.':</label>
 			<textarea class="form-control rounded-0" id="cf_message" name="message" cols="50" rows="3">'.$form_data['message'].'</textarea>
 		</div>
 		<div class="form-group mb-3">
 			<input class="pt-1 pb-1 btn btn-outline-secondary rounded-0" id="cf_send" type="submit" value="'.$label_submit.'" name="send" />
 		</div>
-	</form></div>';
+	</form>';
 	
 	if($sent == true) {
 		return $info.$email_form;

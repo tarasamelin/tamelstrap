@@ -1,5 +1,7 @@
 <?php
 /**
+ * [map zoom="15" lat="49.8252481" lng="23.9590636" marker1lat="49.827766" marker1lng="23.951339" marker1title="МАГАЗИН Колірбур, м. Львів, вул. Городоцька, 224" marker2lat="49.8214278" marker2lng="23.9696201" marker2title="САЛОН Колірбуд, м.Львів, вул.Любінська,104"]
+ * google map js api 111111111111111111111111111111111111111
 **/
 
 add_shortcode( 'map', 'tml_map' );
@@ -23,7 +25,7 @@ function tml_map($atts){
 			'zoom' => 16,
 			'enablescrollwheel' => false,
 			'disablecontrols' => false,
-			'key' => '111111111111111111111111111111111111111111111111'
+			'key' => '111111111111111111111111111111111111111'
 		), $atts );
     extract( $atts );
     $tml_map_array = array(

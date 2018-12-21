@@ -1,7 +1,7 @@
 <?php
 /**
  * Cart Page
- * @version     3.4.0
+ * @version 3.5.0
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -18,10 +18,10 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<tr>
 				<th class="product-remove">&nbsp;</th>
 				<th class="product-thumbnail">&nbsp;</th>
-				<th class="product-name"><?php _e( 'Product', 'woocommerce' ); ?></th>
-				<th class="product-price"><?php _e( 'Price', 'woocommerce' ); ?></th>
-				<th class="product-quantity"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-				<th class="product-subtotal"><?php _e( 'Total', 'woocommerce' ); ?></th>
+				<th class="product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
+				<th class="product-price"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
+				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
+				<th class="product-subtotal"><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -39,6 +39,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 						<td class="product-remove">
 							<?php
+                                // @codingStandardsIgnoreLine
 								echo apply_filters( 'woocommerce_cart_item_remove_link', sprintf(
 									'<a href="%s" class="h3 remove" aria-label="%s" data-product_id="%s" data-product_sku="%s">&times;</a>',
 									esc_url( WC()->cart->get_remove_url( $cart_item_key ) ),
@@ -54,9 +55,9 @@ do_action( 'woocommerce_before_cart' ); ?>
 								$thumbnail = apply_filters( 'woocommerce_cart_item_thumbnail', $_product->get_image(), $cart_item, $cart_item_key );
 
 								if ( ! $product_permalink ) {
-									echo wp_kses_post( $thumbnail );
+									echo $thumbnail; // PHPCS: XSS ok.
 								} else {
-									printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), wp_kses_post( $thumbnail ) );
+									printf( '<a href="%s">%s</a>', esc_url( $product_permalink ), wp_kses_post( $thumbnail ) ); // PHPCS: XSS ok.
 								}
 							?>
 						</td>
@@ -102,7 +103,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 									), $_product, false );
 								}
 
-								echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item );
+								echo apply_filters( 'woocommerce_cart_item_quantity', $product_quantity, $cart_item_key, $cart_item ); // PHPCS: XSS ok.
 							?>
 						</td>
 
