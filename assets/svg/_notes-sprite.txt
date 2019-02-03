@@ -1,0 +1,124 @@
+
+svg-i info-circle 
+svg-i arrow-circle-up 
+svg-i angle-down
+svg-i angle-right
+svg-i plus-circle 
+svg-i minus-circle 
+svg-i times-circle 
+svg-i home
+svg-i search 
+svg-i shopping-basket
+svg-i envelope 
+svg-i mobile-alt
+
+svg-i facebook
+svg-i instagram
+svg-i twitter
+svg-i google-plus
+
+svg-i viber
+svg-i telegram 
+svg-i skype
+
+
+<i class="svg-i info-circle "></i>
+<i class="svg-i arrow-circle-up"></i>
+<i class="svg-i angle-down"></i>
+<i class="svg-i angle-right"></i>
+<i class="svg-i plus-circle"></i>
+<i class="svg-i minus-circle"></i>
+<i class="svg-i times-circle"></i>
+<i class="svg-i home"></i>
+<i class="svg-i search"></i>
+<i class="svg-i shopping-basket"></i>
+<i class="svg-i envelope"></i>
+<i class="svg-i mobile-alt"></i>
+
+<i class="svg-i facebook"></i>
+<i class="svg-i instagram"></i>
+<i class="svg-i twitter"></i>
+<i class="svg-i google-plus"></i>
+
+<i class="svg-i viber"></i>
+<i class="svg-i telegram"></i>
+<i class="svg-i skype"></i>
+
+-------------------------------------------------
+-------------------------------------------------
+-------------------------------------------------
+
+/wp-content/themes/tamelstrap/assets/svg/svg-sprite.svg#bicycle-solid
+
+<!--
+<svg>
+	<use xlink:href="#info-icon">
+</svg>
+-->
+
+<svg class="svg-icon info-circle">
+	<use xlink:href="<?php echo get_stylesheet_directory_uri().'/assets/svg/svg-sprite.svg'; ?>#info-circle">
+</svg>
+
+<svg class="svg-icon info-circle">
+    <use xlink:href="wp-content/themes/tamelstrap/assets/svg/sprite.svg#info-circle">
+</svg>
+
+
+<style>
+.svg2 {
+    background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='red' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-size: 20px 20px;
+}
+</style>
+
+
+<style>
+/* ----------- SVG ICONS COLORS START -------- */
+a svg {cursor: pointer;}
+.svg-icon {
+display: inline-block;
+height: 1.15rem;
+width: 1.15rem;
+vertical-align: text-bottom;
+}
+.svg-icon.info-circle {color: #94BBDB !important; opacity:0.65;}
+.svg-icon.arrow-circle-up-solid {color: #94BBDB !important;} 
+.svg-icon.angle-down-solid {color: #94BBDB !important;}
+.svg-icon.angle-right-solid {color: #94BBDB !important;}
+.svg-icon.plus-circle-solid {color: #94BBDB !important; opacity:0.75;}
+.svg-icon.minus-circle-solid {color: #94BBDB !important; opacity:0.75;}
+.svg-icon.home-solid {color: #94BBDB !important;}
+.svg-icon.search-solid {color: #94BBDB !important;}
+.svg-icon.shopping-basket-solid {color: #94BBDB !important;}
+.svg-icon.envelope-square-solid, .svg-icon.envelope-regular {color: #94BBDB !important; opacity:0.65;}
+.svg-icon.mobile-alt-solid {color: #94BBDB !important;}
+.svg-icon.facebook-brands {color: #4267B2 !important;}
+.svg-icon.instagram-brands {color: #656565 !important;}
+.svg-icon.linkedin-brands {color: #0077B5 !important;}
+.svg-icon.twitter-brands {color: #1DA1F2 !important;}
+.svg-icon.google-plus-brands {color: #D44439 !important;}
+.svg-icon.viber-brands {color: #B793C2 !important;}
+.svg-icon.telegram-plane-brands {color: #2FA8E1 !important;}
+/* ----------- SVG ICONS COLORS END ---------- */
+</style>
+
+<style>
+
+.svg-icon.angle-down-solid {
+    background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='#8DA6B8' d='M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-size: 0.8rem;
+}
+
+</style>
+
+<style>
+
+.mysvgbackground {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><circle cx="400" cy="300" r="50" stroke-width="5" stroke="#f00" fill="#ff0" /></svg>') center center no-repeat;
+}
+
+</style>
+
+
+

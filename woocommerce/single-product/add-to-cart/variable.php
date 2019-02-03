@@ -30,7 +30,7 @@ do_action( 'woocommerce_before_add_to_cart_form' ); ?>
 									'attribute' => $attribute_name,
 									'product'   => $product,
 								) );
-								echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<a class="mt-1 ml-2 border pl-3 pr-3 pt-2 pb-2 align-middle reset_variations" href="#">' . esc_html__( 'Clear', 'woocommerce' ) . '</a>' ) ) : '';
+								echo end( $attribute_keys ) === $attribute_name ? wp_kses_post( apply_filters( 'woocommerce_reset_variations_link', '<a class="d-inline-block mt-1 ml-2 border pl-3 pr-3 pt-1 pb-1 align-middle reset_variations" href="#">' . esc_html__( 'Clear', 'woocommerce' ) . '</a>' ) ) : '';
 							?>
 						</td>
 					</tr>

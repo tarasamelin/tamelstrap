@@ -10,7 +10,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-<div class="home-description-level pt-4 pb-2">
+<div class="pt-4 pb-2 home-description-level">
     <div class="container-fluid text-center">
         <?php
         if ( have_posts() ) : 

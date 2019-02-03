@@ -1,0 +1,24 @@
+
+
+.wp-block {
+/*    width: 852px; */
+    max-width: 1080px; 
+}
+
+/* Main column width */
+body.gutenberg-editor-page .editor-post-title__block,
+body.gutenberg-editor-page .editor-default-block-appender,
+body.gutenberg-editor-page .editor-block-list__block {
+/*    max-width: 720px;*/
+    max-width: 1080px;
+}
+
+/* Width of "wide" blocks */
+body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
+    max-width: 1080px;
+}
+
+/* Width of "full-wide" blocks */
+body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
+    max-width: none;
+}

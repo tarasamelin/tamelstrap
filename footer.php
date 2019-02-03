@@ -4,7 +4,7 @@
  */
 ?>
 </div><!-- #content -->
-<a class="d-none totopbtn"><i class="fas fa-arrow-circle-up h1" aria-hidden="true"></i></a>
+<a class="d-none totopbtn"><i class="svg-i arrow-circle-up"></i></a>
     <footer id="colophon" class="site-footer bg-light pb-3 pt-3 mt-4 border border-right-0 border-left-0 border-bottom-0" role="contentinfo" itemscope itemtype="https://schema.org/WPFooter">
 <!--       <nav class="navbar navbar-expand-lg pb-3 pt-3">-->
         <div class="container-fluid">
@@ -19,7 +19,6 @@
         </div> <!-- container -->
 <!--        </nav>-->
     </footer><!-- #colophon -->
-
 </div><!-- #page -->
 <?php wp_footer(); ?>
 </body>

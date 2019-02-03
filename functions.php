@@ -39,13 +39,12 @@ require_once get_template_directory().'/inc/aq_resizer.php';
  */
 require_once get_template_directory().'/shortcodes/tml-gallery.php';
 //require_once get_template_directory().'/shortcodes/tml-gallery2.php';
-/* carousel incomplete */
-//require_once get_template_directory().'/shortcodes/tml-items-carousel.php';
 
 /*
  * Shortcode Contact form
  */
 require_once get_template_directory().'/shortcodes/tml-contact-form.php';
+require_once get_template_directory().'/shortcodes/tml-contact-form-upload.php';
 
 /*
  * Shortcode Google Map

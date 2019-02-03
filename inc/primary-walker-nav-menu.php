@@ -49,10 +49,10 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ){
 		$item_output .= '<a ' . $attributes . ' itemprop="url">';
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
         if ( $depth == 0 ){
-		$item_output .= ( $args->walker->has_children ) ? ' <i class="ml-1 fas fa-angle-down" aria-hidden="true"></i></a>' : '</a>';
+		$item_output .= ( $args->walker->has_children ) ? ' <i class="ml-1 svg-i angle-down"></i></a>' : '</a>';
         }
         else {
-		$item_output .= ( $args->walker->has_children ) ? ' <i class="pl-3 pt-1 d-none d-sm-inline fas fa-angle-right" aria-hidden="true"></i></a>' : '</a>';
+		$item_output .= ( $args->walker->has_children ) ? ' <i class="pl-3 pt-1 d-none d-sm-inline svg-i angle-right"></i></a>' : '</a>';
         }
 		$item_output .= $args->after;
 		

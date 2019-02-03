@@ -19,7 +19,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <!-- breadcrumbs for blog page -->
     <?php if ( is_home() && !is_front_page() ) : ?>
-        <li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo get_the_title( get_option('page_on_front') ); ?></a></li>
+        <li class="breadcrumb-item">
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php // echo get_the_title( get_option('page_on_front') ); ?><?php echo _x( 'Home', 'breadcrumb', 'woocommerce' ); ?></a>
+        </li>
         <?php
             $posts_page = get_post( get_option( 'page_for_posts') );
             $title_blog_page = ' ' . $posts_page->post_title . ' ';
@@ -30,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <?php elseif ( is_category() ) : ?>
         <li class="breadcrumb-item">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <?php echo get_the_title( get_option('page_on_front') ); ?>
+                <?php echo _x( 'Home', 'breadcrumb', 'woocommerce' ); ?>
             </a>
         </li>
         <li class="breadcrumb-item">
@@ -43,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     
 <!-- breadcrumbs for single post -->
     <?php elseif (  is_singular('post') ) : ?>
-        <li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo get_the_title( get_option('page_on_front') ); ?></a></li>
+        <li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo _x( 'Home', 'breadcrumb', 'woocommerce' ); ?></a></li>
         <li class="breadcrumb-item">
             <a href="<?php echo get_post_type_archive_link( 'post' ); ?>" rel="home">
             <?php $posts_page = get_post( get_option( 'page_for_posts') );
@@ -54,12 +56,12 @@ if ( ! defined( 'ABSPATH' ) ) {
         <li class="breadcrumb-item active"><?php the_title() ?></li>
 <!-- breadcrumbs for page (not child) -->
     <?php elseif ( ( is_page() && !is_front_page() && !tml_is_child_page() ) || is_404() || is_search() ) : ?>
-        <li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo get_the_title( get_option('page_on_front') ); ?></a></li>
+        <li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo _x( 'Home', 'breadcrumb', 'woocommerce' ); ?></a></li>
         <li class="breadcrumb-item active"><?php the_title() ?></li>
 
 <!-- breadcrumbs for child page -->
     <?php elseif ( tml_is_child_page() ) : ?>
-        <li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo get_the_title( get_option('page_on_front') ); ?></a></li>
+        <li class="breadcrumb-item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo _x( 'Home', 'breadcrumb', 'woocommerce' ); ?></a></li>
         <?php
         $parent = get_post($post->post_parent);
         $parent_title = get_the_title($parent);
