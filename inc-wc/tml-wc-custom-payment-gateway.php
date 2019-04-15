@@ -1,6 +1,6 @@
 <?php
 /*
- *TML WooCommerce custome Payment Gateway
+ *TML WooCommerce custom Payment Gateway
  */
 add_filter('woocommerce_payment_gateways', 'add_other_payment_gateway');
 function add_other_payment_gateway( $gateways ){

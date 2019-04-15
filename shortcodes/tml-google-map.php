@@ -17,7 +17,7 @@ function tml_map($atts){
 			'zoom' => 16,
 			'enablescrollwheel' => false,
 			'disablecontrols' => false,
-			'key' => '111111111111111111111111111111111111111'
+			'key' => 'AIzaSyC1d-FtX6E4pTcAvS-gkrIpyIFiqZa2Eoc'
 		), $atts );
     extract( $atts );
     $tml_map_array = array(

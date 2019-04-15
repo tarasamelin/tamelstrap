@@ -69,11 +69,11 @@ require_once get_template_directory().'/inc-wc/tml-wc-template-functions.php';
 require_once get_template_directory().'/inc-wc/tml-wc-template-hooks.php';
 
 /*
- * TML WooCommerce Custome Checkout Fields
+ * TML WooCommerce Custom Checkout Fields
  */
-require_once get_template_directory().'/inc-wc/tml-wc-custome-checkout-fields.php';
+require_once get_template_directory().'/inc-wc/tml-wc-custom-checkout-fields.php';
 
 /*
- * TML WooCommerce Custome Payment gateway
+ * TML WooCommerce Custom Payment gateway
  */
-require_once get_template_directory().'/inc-wc/tml-wc-custome-payment-gateway.php';
+require_once get_template_directory().'/inc-wc/tml-wc-custom-payment-gateway.php';

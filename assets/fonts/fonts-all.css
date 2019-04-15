@@ -48,6 +48,20 @@
     text-rendering: optimizeLegibility;
 }
 
+/*Alegreya-Sans-Regular*/
+
+@font-face {
+    font-family: 'Alegreya-Sans-Regular';
+    src: url('Alegreya-Sans-Regular/Alegreya-Sans-Regular.eot');
+    src: url('Alegreya-Sans-Regular/Alegreya-Sans-Regular.eot?#iefix') format('embedded-opentype'),
+         url('Alegreya-Sans-Regular/Alegreya-Sans-Regular.woff2') format('woff2'),
+         url('Alegreya-Sans-Regular/Alegreya-Sans-Regular.woff') format('woff'),
+         url('Alegreya-Sans-Regular/Alegreya-Sans-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
 
 /*Aleo*/
 @font-face {

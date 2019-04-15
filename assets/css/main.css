@@ -275,8 +275,8 @@ form.search-form input {
 #secondary ul.woocommerce-widget-layered-nav-list li a:hover:before,
 #secondary ul.woocommerce-widget-layered-nav-list li.chosen a:before{
     background-image: var(--svg-i-checkbox-checked);
-    margin-left: 0.3rem;
-    margin-right: 0.4rem;
+/*    margin-left: 0.3rem;*/
+/*    margin-right: 0.4rem;*/
 }
 
 #secondary ul.woocommerce-widget-layered-nav-list li.chosen a:hover:after {

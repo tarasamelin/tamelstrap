@@ -47,7 +47,8 @@ get_header(); ?>
 
                 echo '<div class="mb-2 p-0 col-sm-6 col-md-4 product-category">';
                 echo '<a href="' . esc_url( $term_link ) . '"  class="d-block m-1 mx-4" >';
-                echo '<img class="border rounded-0 img-fluid w-100" src="'.$img_thumb_src.'" alt=" width="390" height="390" />';
+                if( $img_thumb_src ){ echo '<img class="border rounded-0 img-fluid w-100" src="'.$img_thumb_src.'" alt="' . $term->name . '" width="390" height="390" />'; }
+				else { echo '<img class="border rounded-0 img-fluid w-100" src="' .wc_placeholder_img_src(). '" alt="' . $term->name . '" width="390" height="390" />'; }
                 echo '<h3 class="h4 mt-1 text-center mb-0">' . $term->name . '</h3></a>';
                 echo '</div>';
 

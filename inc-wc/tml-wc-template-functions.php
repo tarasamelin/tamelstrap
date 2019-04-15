@@ -111,7 +111,7 @@ function tml_woocommerce_output_content_wrapper_with_sidebar() {
 **/
 function woocommerce_output_related_products() {
     $args = array(
-        'posts_per_page' 	=> 4,
+        'posts_per_page' 	=> 1,
         'columns' 			=> 4,
         'orderby' 			=> 'rand', // @codingStandardsIgnoreLine.
     );

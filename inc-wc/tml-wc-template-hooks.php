@@ -76,7 +76,6 @@ function tml_full_width_related_products() {
     }
 }
 
-
 /**
  * Replace Output the product tabs.
 **/
