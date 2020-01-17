@@ -1,8 +1,8 @@
 # tamelstrap
 
-1.0.1 BETA developer edition
+1.0.2 BETA developer edition
 
-Last Update: 20190929
+Last Update: 20200116
 
 WordPress WooCommerce BootStrap4 Theme
 
