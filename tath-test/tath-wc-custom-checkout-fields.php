@@ -2,9 +2,9 @@
 /**
  * Custome woocommerce checkout fields Filter
  */ 
-add_filter( 'woocommerce_checkout_fields' , 'tml_wc_custome_checkout_fields' );
+add_filter( 'woocommerce_checkout_fields' , 'tath_wc_custome_checkout_fields' );
 
-function tml_wc_custome_checkout_fields( $fields ) {
+function tath_wc_custome_checkout_fields( $fields ) {
    
 /**
  * Sorting woocommerce checkout billing fields
@@ -114,7 +114,7 @@ foreach($order_shipping as $field) {
 //$fields['billing']['billing_first_name']['label'] = '';
 //$fields['billing']['billing_last_name']['label'] = '';
 //$fields['billing']['billing_company_name']['label'] = '';
-$fields['billing']['billing_address_1']['label'] = __( 'Shipping Adress', 'tamelstrap' );
+$fields['billing']['billing_address_1']['label'] = __( 'Shipping Adress', 'tath' );
 //$fields['billing']['billing_address_2']['label'] = '';
 //$fields['billing']['billing_city']['label'] = '';
 //$fields['billing']['billing_postcode']['label'] = '';
@@ -198,7 +198,7 @@ $fields['order']['order_comments']['placeholder'] = '';
 //[autocomplete] => given-name
 //[autofocus] => 1
 //[priority] => 10
-//[input_class] => Array( [0] => form-control rounded-0 p-1 ml-1 )
+//[input_class] => Array( [0] => form-control p-1 ml-1 )
 //[label_class] => Array( [0] => ml-1 ) )
 return $fields;
 }

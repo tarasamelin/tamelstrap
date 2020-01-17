@@ -12,10 +12,10 @@ do_action( 'woocommerce_before_account_navigation' );
 ?>
 
 <nav class="mb-4 woocommerce-MyAccount-navigation">
-	<ul class="nav nav-pills">
+	<ul class="justify-content-center nav nav-pills">
 		<?php foreach ( wc_get_account_menu_items() as $endpoint => $label ) : ?>
 			<li class="nav-item <?php echo wc_get_account_menu_item_classes( $endpoint ); ?>">
-				<a class="border border-secondary btn-outline-secondary rounded-0 nav-link" href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>"><?php echo esc_html( $label ); ?></a>
+				<a class="border btn-outline-primary nav-link" href="<?php echo esc_url( wc_get_account_endpoint_url( $endpoint ) ); ?>"><?php echo esc_html( $label ); ?></a>
 			</li>
 		<?php endforeach; ?>
 	</ul>

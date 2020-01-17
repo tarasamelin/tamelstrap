@@ -3,9 +3,9 @@
  * Social Share ShortCode
  */
 //echo do_shortcode('[socialshare]');
-add_shortcode('socialshare', 'tml_social_share');
+add_shortcode('socialshare', 'tath_social_share');
 
-function tml_social_share() { 
+function tath_social_share() { 
 	$decoded_title = html_entity_decode(get_the_title($post->ID),ENT_QUOTES,'UTF-8');
 	$clean_title = preg_replace('#<[a-zA-Z]+>(.*?)</[a-zA-Z]+>#', '$1', $decoded_title);
 	$encoded_title = urlencode($clean_title);

@@ -4,11 +4,11 @@
 **/ 
 
 remove_shortcode( 'gallery' );
-add_shortcode( 'gallery', 'tml_gallery' );
-function tml_gallery($atts){
+add_shortcode( 'gallery', 'tath_gallery' );
+function tath_gallery($atts){
     
 	$img_id = explode(',', $atts['ids']);
-	$html = '<div class="tml-photoswipe-gallery masonry-grid">';
+	$html = '<div class="tath-photoswipe-gallery masonry-grid">';
 	
     foreach($img_id as $item){
 		$img_data = get_posts( array(

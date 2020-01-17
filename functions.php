@@ -20,12 +20,12 @@ require_once get_template_directory().'/inc/primary-walker-nav-menu.php';
 require_once get_template_directory().'/inc/widget-nav-menu.php';
 
 /*
- * tml custome function
+ * TATH Theme function
  */
-require_once get_template_directory().'/inc/tml-functions.php';
+require_once get_template_directory().'/inc/tath-functions.php';
 
 /*
- * tml CPT
+ * CPT
  */
 require_once get_template_directory().'/inc/cpt.php';
 
@@ -37,43 +37,27 @@ require_once get_template_directory().'/inc/aq_resizer.php';
 /*
  *  Shortcodes Galleries
  */
-require_once get_template_directory().'/shortcodes/tml-gallery.php';
-//require_once get_template_directory().'/shortcodes/tml-gallery2.php';
-
-/*
- * Shortcode Contact form
- */
-require_once get_template_directory().'/shortcodes/tml-contact-form.php';
-require_once get_template_directory().'/shortcodes/tml-contact-form-upload.php';
+require_once get_template_directory().'/shortcodes/tath-gallery-shortcode.php';
 
 /*
  * Shortcode Google Map
  */
-require_once get_template_directory().'/shortcodes/tml-google-map.php';
-//require_once get_template_directory().'/shortcodes/tml-google-map2.php';
-//require_once get_template_directory().'/shortcodes/tml-google-map2-markers.php';
+require_once get_template_directory().'/shortcodes/tath-google-map-shortcode.php';
 
 /*
- * Shortcode Socila Share
+ * TATH Shortcode Modal Window within shortcode
  */
-require_once get_template_directory().'/shortcodes/tml-social-share.php';
+require_once get_template_directory().'/shortcodes/tath-shortcode-modal-window-cf7.php';
 
-/*
- * TML WooCommerce Template Functions
- */
-require_once get_template_directory().'/inc-wc/tml-wc-template-functions.php';
+// Check is WooCommerce Activated
+if ( tath_is_woocommerce_activated() ){
+    /*
+     * TATH WooCommerce Template Functions
+     */
+    require_once get_template_directory().'/inc-wc/tath-wc-template-functions.php';
 
-/*
- * TML WooCommerce Templates Hooks
- */
-require_once get_template_directory().'/inc-wc/tml-wc-template-hooks.php';
-
-/*
- * TML WooCommerce Custom Checkout Fields
- */
-require_once get_template_directory().'/inc-wc/tml-wc-custom-checkout-fields.php';
-
-/*
- * TML WooCommerce Custom Payment gateway
- */
-require_once get_template_directory().'/inc-wc/tml-wc-custom-payment-gateway.php';
+    /*
+     * TATH WooCommerce Templates Hooks
+     */
+    require_once get_template_directory().'/inc-wc/tath-wc-template-hooks.php';
+}

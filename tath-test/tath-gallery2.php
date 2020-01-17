@@ -2,11 +2,11 @@
 
 // gallery lightbox2
     
-add_shortcode( 'gallery1', 'tml_gallery1' );
-function tml_gallery1($atts){
+add_shortcode( 'gallery1', 'tath_gallery1' );
+function tath_gallery1($atts){
     
 	$img_id = explode(',', $atts['ids']);
-	$html = '<div class="tml-gallery"><div class="d-lg-flex justify-content-lg-center">';
+	$html = '<div class="tath-gallery"><div class="d-lg-flex justify-content-lg-center">';
     
     $img_count = 0;
 	foreach($img_id as $item){
@@ -32,11 +32,11 @@ function tml_gallery1($atts){
 
 // gallery photoswipe 4 columns
 
-add_shortcode( 'gallery2', 'tml_gallery2' );
-function tml_gallery2($atts){
+add_shortcode( 'gallery2', 'tath_gallery2' );
+function tath_gallery2($atts){
     
 	$img_id = explode(',', $atts['ids']);
-	$html = '<div class="tml-photoswipe-gallery row">';
+	$html = '<div class="tath-photoswipe-gallery row">';
     
 	foreach($img_id as $item){
 		$img_data = get_posts( array(

@@ -4,7 +4,7 @@
  */
 ?>
 <?php if ( ! WC()->cart->is_empty() ) : ?>
-<ul class="navbar-nav tml-wc-mini-cart justify-content-end"><li class="dropdown nav-item">
+<ul class="navbar-nav tath-wc-mini-cart justify-content-end"><li class="dropdown nav-item">
 <script>
 jQuery( function($) {
 $( 'header .navbar .dropdown a.cart-contents' ).click(function(){
@@ -25,7 +25,7 @@ function() {
         <span class="text-dark amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span>
         </a>
         <?php //woocommerce_mini_cart(); ?>
-        <ul class="dropdown-menu rounded-0 woocommerce-mini-cart cart_list product_list_widget <?php echo esc_attr( $args['list_class'] ); ?>">
+        <ul class="dropdown-menu woocommerce-mini-cart cart_list product_list_widget <?php echo esc_attr( $args['list_class'] ); ?>">
 		<?php
 //			do_action( 'woocommerce_before_mini_cart_contents' );
 			foreach ( WC()->cart->get_cart() as $cart_item_key => $cart_item ) {
@@ -68,7 +68,7 @@ function() {
 </li></ul>
 
 <?php elseif ( WC()->cart->is_empty() ) : ?>
-<ul class="navbar-nav tml-wc-mini-cart justify-content-end"><li class="nav-item">
+<ul class="navbar-nav tath-wc-mini-cart justify-content-end"><li class="nav-item">
 <a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View cart', 'woocommerce' ); ?>">
 <span class="pl-1"><?php esc_attr_e( 'Cart', 'woocommerce' ); ?></span>
 <i class="svg-i shopping-basket"></i>

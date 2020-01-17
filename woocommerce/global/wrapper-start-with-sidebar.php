@@ -9,5 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 ?>
+<?php if ( is_active_sidebar( 'sidebar-1' ) ): ?>
 	<div id="primary" class="content-area col-lg-9 col-md-8">
+<?php else: ?>
+	<div id="primary" class="content-area col-12">
+<?php endif; ?>
 		<main id="main" class="site-main" role="main">

@@ -50,9 +50,10 @@
         <nav class="container-fluid py-0 navbar navbar-expand-lg navbar-light">
 <!--        <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>-->
             
-            <?php tml_the_custom_logo();?>
-            <button class="navbar-toggler border" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <?php tath_the_custom_logo();?>
+            <button class="navbar-toggler border py-2" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<!--                <span class="navbar-toggler-icon"></span>-->
+                <i class="svg-i svg-i-2 bars"></i>
             </button>
                     
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown" itemscope itemtype="https://www.schema.org/SiteNavigationElement">
@@ -66,9 +67,9 @@
                     'walker' => new Primary_Walker_Nav_Menu()
                     ) );
                 }?>
-                <ul class="d-lg-none navbar-nav text-center tml-wc-mini-cart-mobile">
+                <ul class="d-lg-none navbar-nav text-center tath-wc-mini-cart-mobile">
                     <li class="p-1 nav-item">
-                        <a class="nav-link cart-mobile-link" href="<?php echo esc_url( wc_get_cart_url() ); ?>" >
+                        <a class="nav-link cart-mobile-link" href="<?php if ( tath_is_woocommerce_activated() ){ echo esc_url( wc_get_cart_url() ); }?>" >
                             <span class="pl-1"><?php esc_attr_e( 'Cart', 'woocommerce' ); ?> </span> <i class="svg-i shopping-basket"></i>
                         </a>
                     </li>
@@ -76,8 +77,8 @@
             </div>
             <div class="d-none d-lg-inline-block" >
                 <?php 
-                if ( tml_is_woocommerce_activated() ){
-                    do_action( 'tml_header_cart' );
+                if ( tath_is_woocommerce_activated() ){
+                    do_action( 'tath_header_cart' );
                 }
                 ?>
             </div>
@@ -90,9 +91,3 @@
 <?php get_template_part( 'template-parts/breadcrumbs'); ?>
 
 <div id="content" class="site-content <?php if(!is_front_page()){ echo 'container-fluid';}else{echo '';} ?>">
-<?php //if( is_front_page() ): ?>
-<!--    <div id="content" class="site-content">-->
-    <?php get_template_part( 'template-parts/slider' ); ?>
-<?php //else: ?>
-<!--    <div id="content" class="container-fluid site-content">-->
-<?php //endif; ?>

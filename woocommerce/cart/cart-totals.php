@@ -4,23 +4,23 @@
  * This template can be overridden by copying it to yourtheme/woocommerce/cart/cart-totals.php.
  * @version     2.3.6
  */
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 ?>
 <div class="cart_totals <?php echo ( WC()->customer->has_calculated_shipping() ) ? 'calculated_shipping' : ''; ?>">
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<h2 class="h4 text-secondary ml-2"><?php _e( 'Cart totals', 'woocommerce' ); ?>:</h2>
-
+<!--	<h2 class="h4 text-primary ml-2"><?php _e( 'Cart totals', 'woocommerce' ); ?>:</h2>-->
+<br>
 	<table cellspacing="0" class="table table-bordered  shop_table shop_table_responsive">
 
+<!--
 		<tr class="cart-subtotal">
 			<th><?php _e( 'Subtotal', 'woocommerce' ); ?></th>
 			<td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
 		</tr>
+-->
 
 		<?php foreach ( WC()->cart->get_coupons() as $code => $coupon ) : ?>
 			<tr class="cart-discount coupon-<?php echo esc_attr( sanitize_title( $code ) ); ?>">

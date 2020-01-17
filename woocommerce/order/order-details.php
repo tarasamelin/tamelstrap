@@ -1,13 +1,14 @@
 <?php
 /**
  * Order details
- * @version 3.5.2
+ * @version 3.7.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-if ( ! $order = wc_get_order( $order_id ) ) {
+defined( 'ABSPATH' ) || exit;
+
+$order = wc_get_order( $order_id ); // phpcs:ignore WordPress.WP.GlobalVariablesOverride.OverrideProhibited
+
+if ( ! $order ) {
 	return;
 }
 
@@ -61,8 +62,8 @@ if ( $show_downloads ) {
 				foreach ( $order->get_order_item_totals() as $key => $total ) {
 					?>
 					<tr>
-						<th scope="row"><?php echo $total['label']; ?></th>
-						<td><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : $total['value']; ?></td>
+						<th scope="row"><?php echo esc_html( $total['label'] ); ?></th>
+						<td><?php echo ( 'payment_method' === $key ) ? esc_html( $total['value'] ) : wp_kses_post( $total['value'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></td>
 					</tr>
 					<?php
 				}
@@ -70,7 +71,7 @@ if ( $show_downloads ) {
 			<?php if ( $order->get_customer_note() ) : ?>
 				<tr>
 					<th><?php _e( 'Note:', 'woocommerce' ); ?></th>
-					<td><?php echo wptexturize( $order->get_customer_note() ); ?></td>
+					<td><?php echo wp_kses_post( nl2br( wptexturize( $order->get_customer_note() ) ) ); ?></td>
 				</tr>
 			<?php endif; ?>
 		</tfoot>

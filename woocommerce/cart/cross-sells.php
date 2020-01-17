@@ -4,13 +4,11 @@
  * @version     3.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 if ( $cross_sells ) : ?>
 <hr>
-	<div class="mt-4 container-fluid text-secondary cross-sells">
+	<div class="mt-4 container-fluid text-primary cross-sells">
 
 		<h2 class="h4"><?php _e( 'You may be interested in&hellip;', 'woocommerce' ) ?></h2>
 

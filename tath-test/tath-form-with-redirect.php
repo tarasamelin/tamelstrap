@@ -14,7 +14,7 @@ link=""
 ]
 */
 
-function tml_get_the_ip() {
+function tath_get_the_ip() {
 	if (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
 		return $_SERVER["HTTP_X_FORWARDED_FOR"];
 	}
@@ -72,7 +72,7 @@ function wayforpay_form_sc( $atts ) {
 		if ( $error == false ) {
 			$email_subject = "[" . get_bloginfo('name') . "]" . $subject.$the_title. "\n\n";
             
-			$email_message = "IP: " . tml_get_the_ip(). " \n\n";
+			$email_message = "IP: " . tath_get_the_ip(). " \n\n";
 			$email_message .= "Subject: ".$subject.$the_title." \n\n";
 			$email_message .= "Name: " .$form_data['your_name'] . "\n\n";
 			$email_message .= "E-mail: " .$form_data['your_email'] . "\n\n";
@@ -95,23 +95,23 @@ function wayforpay_form_sc( $atts ) {
     
 	$email_form = '<div class="wayforpay_form_sc row"><form class="col-md-8 contact-form" method="post" action="'.get_permalink().'">
 		<div class="form-group mb-2">
-			<label class="text-secondary mb-0" for="cf_name">'.$label_name.':</label>
-			<input class="form-control rounded-0" id="cf_name" name="your_name" type="text" size="50" maxlength="50" value="'.$form_data['your_name'].'" />
+			<label class="text-primary mb-0" for="cf_name">'.$label_name.':</label>
+			<input class="form-control" id="cf_name" name="your_name" type="text" size="50" maxlength="50" value="'.$form_data['your_name'].'" />
 		</div>
 		<div class="form-group mb-2">
-			<label class="text-secondary mb-0" for="cf_email">'.$label_email.':</label>
-			<input class="form-control rounded-0" id="cf_email" name="your_email" type="text" size="50" maxlength="50" value="'.$form_data['your_email'].'" />
+			<label class="text-primary mb-0" for="cf_email">'.$label_email.':</label>
+			<input class="form-control" id="cf_email" name="your_email" type="text" size="50" maxlength="50" value="'.$form_data['your_email'].'" />
 		</div>
         <div class="form-group mb-2">
-			<label class="text-secondary mb-0" for="cf_email">'.$label_phone.':</label>
-			<input class="form-control rounded-0" id="cf_email" name="your_phone" type="text" size="50" maxlength="50" value="'.$form_data['your_phone'].'" />
+			<label class="text-primary mb-0" for="cf_email">'.$label_phone.':</label>
+			<input class="form-control" id="cf_email" name="your_phone" type="text" size="50" maxlength="50" value="'.$form_data['your_phone'].'" />
 		</div>
 		<div class="form-group mb-2">
-			<label class="text-secondary mb-0" for="cf_message">'.$label_adress.':</label>
-			<textarea class="form-control rounded-0" id="cf_message" name="your_adress" cols="50" rows="3">'.$form_data['your_adress'].'</textarea>
+			<label class="text-primary mb-0" for="cf_message">'.$label_adress.':</label>
+			<textarea class="form-control" id="cf_message" name="your_adress" cols="50" rows="3">'.$form_data['your_adress'].'</textarea>
 		</div>
 		<div class="form-group mb-3">
-			<input class="button pt-1 pb-1 btn btn-outline-secondary rounded-0" id="cf_send" type="submit" value="'.$label_submit.'" name="send" />
+			<input class="button pt-1 pb-1 btn btn-outline-primary" id="cf_send" type="submit" value="'.$label_submit.'" name="send" />
 		</div>
 	</form></div>';
 	

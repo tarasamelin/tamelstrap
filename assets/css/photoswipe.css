@@ -1,24 +1,24 @@
 /*
-.tml-photoswipe-gallery {
+.tath-photoswipe-gallery {
   width: 100%;
   float: left;
 }
-.tml-photoswipe-gallery img {
+.tath-photoswipe-gallery img {
   width: 100%;
   height: auto;
 }
-.tml-photoswipe-gallery figure {
+.tath-photoswipe-gallery figure {
   display: block;
   float: left;
   margin: 0 5px 5px 0;
   width: 150px;
 }
-.tml-photoswipe-gallery figcaption {
+.tath-photoswipe-gallery figcaption {
   display: none;
 }*/
 
 /*
-.tml-photoswipe-gallery figure {
+.tath-photoswipe-gallery figure {
   display: block;
   float: left;
   margin: 0;
@@ -26,7 +26,7 @@
 }
 */
 
-.tml-photoswipe-gallery figcaption {
+.tath-photoswipe-gallery figcaption {
     color: #FFFFFF;
     display: none;
 }

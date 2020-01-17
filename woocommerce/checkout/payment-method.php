@@ -8,10 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<li class="list-group-item rounded-0 wc_payment_method payment_method_<?php echo esc_attr( $gateway->id ); ?>">
-<div class="custom-control custom-radio input-group mb-3">
+<li class="py-1 pt-2 list-group-item wc_payment_method payment_method_<?php echo esc_attr( $gateway->id ); ?>">
+<div class="custom-control custom-radio input-group">
     <input id="payment_method_<?php echo esc_attr( $gateway->id ); ?>" type="radio" class="custom-control-input mr-2" name="payment_method" value="<?php echo esc_attr( $gateway->id ); ?>" <?php checked( $gateway->chosen, true ); ?> data-order_button_text="<?php echo esc_attr( $gateway->order_button_text ); ?>" />
-	<label class="custom-control-label text-secondary" for="payment_method_<?php echo esc_attr( $gateway->id ); ?>">
+	<label class="custom-control-label text-primary" for="payment_method_<?php echo esc_attr( $gateway->id ); ?>">
 		<?php echo $gateway->get_title(); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?> <?php echo $gateway->get_icon(); /* phpcs:ignore WordPress.XSS.EscapeOutput.OutputNotEscaped */ ?>
 	</label>
 </div>

@@ -1,10 +1,13 @@
 <?php
 /**
  * The template for displaying product content in the single-product.php template
- * @version     3.4.0
+ *
+ * @version 3.6.0
  */
 
 defined( 'ABSPATH' ) || exit;
+
+global $product;
 
 /**
  * woocommerce_before_single_product hook.
@@ -19,8 +22,9 @@ defined( 'ABSPATH' ) || exit;
  }
 ?>
 
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class('row'); ?>>
-    
+
+<div id="product-<?php the_ID(); ?>" <?php wc_product_class( 'row', $product ); ?>>  
+
 	<?php
 		/**
 		 * Hook: woocommerce_before_single_product_summary.
@@ -31,7 +35,7 @@ defined( 'ABSPATH' ) || exit;
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
-	<div class="summary entry-summary col-md-12 col-lg-6 mb-4 mb-md-1">
+	<div class="col-md-12 col-lg-6 mb-4 mb-md-1 summary entry-summary">
 
 		<?php
 			/**

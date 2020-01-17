@@ -1,17 +1,17 @@
 <?php
 /**
  * Show options for ordering
- * This template can be overridden by copying it to yourtheme/woocommerce/loop/orderby.php.
- * add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
- * @version     3.3.0
+ *
+ * @version     3.6.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
+	exit;
 }
+
 ?>
-<form class="woocommerce-ordering d-flex justify-content-md-end" method="get">
-	<select name="orderby" class="d-flex justify-content-end custom-select rounded-0 pt-0 pb-0 mb-3 orderby">
+<form class="d-flex justify-content-md-end woocommerce-ordering" method="get">
+	<select name="orderby" class="d-flex justify-content-end custom-select pt-0 pb-0 mb-3 orderby" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); ?>">
 		<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
 			<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
 		<?php endforeach; ?>

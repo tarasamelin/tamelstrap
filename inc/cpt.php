@@ -5,34 +5,34 @@
  *
  */
 
-function tml_cpt_slide() {
-    register_post_type( 'tml-slide' ,array(
+function tath_cpt_slide() {
+    register_post_type( 'tath-slide' ,array(
         'public'=>true,
         'supports' => array( 'title', 'editor', 'thumbnail' ),
         'menu_position' =>120,
         'menu_icon' => admin_url() . 'images/media-button-other.gif' ,
         'labels' => array(
-            'name' => __( 'slides', 'tamelstrap' ),
-            'singular_name' => __( 'slide', 'tamelstrap' ),
-            'menu_name'     => __( 'slider', 'tamelstrap' ),
-            'all_items' => __( 'all slides', 'tamelstrap' ),
-            'add_new' => __( 'add new slide', 'tamelstrap' ),
-            'add_new_item' => __( 'new slide', 'tamelstrap' )
+            'name' => __( 'slides', 'tath' ),
+            'singular_name' => __( 'slide', 'tath' ),
+            'menu_name'     => __( 'slider', 'tath' ),
+            'all_items' => __( 'all slides', 'tath' ),
+            'add_new' => __( 'add new slide', 'tath' ),
+            'add_new_item' => __( 'new slide', 'tath' )
             
             )
     ));
 }
-add_action( 'init' , 'tml_cpt_slide' );
+add_action( 'init' , 'tath_cpt_slide' );
 
-function tml_register_taxonomy() {
+function tath_register_taxonomy() {
 	register_taxonomy(
-		'tml-slider',
-		'tml-slide',
+		'tath-slider',
+		'tath-slide',
 		array(
-			'label' => __( 'sliders', 'tamelstrap' ),
-			'rewrite' => array( 'slug' => 'tml-slider' ),
+			'label' => __( 'sliders', 'tath' ),
+			'rewrite' => array( 'slug' => 'tath-slider' ),
 			'hierarchical' => true,
 		)
 	);
 }
-add_action( 'init', 'tml_register_taxonomy' );
+add_action( 'init', 'tath_register_taxonomy' );

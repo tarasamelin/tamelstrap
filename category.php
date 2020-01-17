@@ -1,6 +1,6 @@
 <?php
 /**
- * The Archive template
+ * Post category template
  */
  
 get_header(); ?>
@@ -9,8 +9,7 @@ get_header(); ?>
 
     <?php get_sidebar(); ?>
 
-<!--	<div id="primary" class="content-area col-lg-9 col-md-8">-->
-	<div id="primary" class="content-area col-12">
+	<div id="primary" class="col-12 content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -24,13 +23,12 @@ get_header(); ?>
 	    <div class="row justify-content-center">
 			<?php
 			while ( have_posts() ) : the_post();
-//                echo '<div class="col-sm-12 col-lg-6">';
                 echo '<div class="col-sm-6 col-lg-4">';
                     get_template_part( 'template-parts/content', 'col3full' );
                 echo '</div>';
 			endwhile;
 	   echo '</div>';
-            tml_pagination();
+            tath_pagination();
 		else :
 			get_template_part( 'template-parts/content', 'none' );
 		endif; ?>

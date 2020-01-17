@@ -3,11 +3,11 @@
  * SideBar Widget NavMenu
  */
 
-add_filter( 'widget_nav_menu_args', 'tml_sidebar_menu', 10, 4 );
-function tml_sidebar_menu( $nav_menu_args, $nav_menu, $args, $instance ) {
+add_filter( 'widget_nav_menu_args', 'tath_sidebar_menu', 10, 4 );
+function tath_sidebar_menu( $nav_menu_args, $nav_menu, $args, $instance ) {
     if( $args['id'] == 'sidebar-1' ) {
         $nav_menu_args['container'] = '';
-        $nav_menu_args['menu_class'] = 'list-group rounded-0';
+        $nav_menu_args['menu_class'] = 'list-group';
         $nav_menu_args[ 'walker' ] = new Sidebar_Walker_Nav_Menu();
         return $nav_menu_args;
     }
@@ -44,7 +44,7 @@ class Sidebar_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$classes[] = ( $args->walker->has_children ) ? '' : '';
 		$classes[] = ( $item->current || $item->current_item_ancestor ) ? 'active' : '';
 		$classes[] = 'menu-item-' . $item->ID;
-		$classes[] = ( $depth==0 ) ? 'rounded-0 p-0 list-group-item bg-white border-0' : 'rounded-0 p-0 list-group-item bg-light border-0';
+		$classes[] = ( $depth==0 ) ? 'p-0 list-group-item bg-white border-0' : 'p-0 list-group-item bg-light border-0';
 		
 		$class_names =  join(' ', apply_filters('nav_menu_css_class', array_filter( $classes ), $item, $args ) );
 		$class_names = ' class="' . esc_attr($class_names) . '"';
@@ -59,14 +59,14 @@ class Sidebar_Walker_Nav_Menu extends Walker_Nav_Menu {
 		$attributes .= ! empty( $item->xfn ) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
 		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr($item->url) . '"' : '';
 		
-		$attributes .= ( $args->walker->has_children ) ? 'class="nav-link text-secondary"' : 'class="nav-link text-secondary"'; 
+		$attributes .= ( $args->walker->has_children ) ? 'class="nav-link text-primary"' : 'class="nav-link text-primary"'; 
 		
 		$item_output = $args->before;
-		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<div class="btn-group w-100"><button class="btn border-0 bg-white w-100 text-left p-0 rounded-0" type="button"><a' . $attributes . ' itemprop="url">' : '<a' . $attributes . ' itemprop="url">';
+		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<div class="btn-group w-100"><button class="btn border-0 bg-white w-100 text-left p-0" type="button"><a' . $attributes . ' itemprop="url">' : '<a' . $attributes . ' itemprop="url">';
 		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
 		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '</a></button>' : '</a>';
         
-		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<button class="border-0 rounded-0 border-0 pl-3 pr-3 bg-white" type="button" data-toggle="collapse" data-target="#collapse-id-'.$item->ID.'" aria-expanded="false" aria-controls="collapseExample" ><i class="svg-i plus-circle"></i><i class="svg-i minus-circle"></i></button></div><ul class="collapse pl-0" id="collapse-id-'.$item->ID.'">' : '';
+		$item_output .= ( $depth == 0 && $args->walker->has_children ) ? '<button class="border-0 border-0 pl-3 pr-3 bg-white" type="button" data-toggle="collapse" data-target="#collapse-id-'.$item->ID.'" aria-expanded="false" aria-controls="collapseExample" ><i class="svg-i plus-circle"></i><i class="svg-i minus-circle"></i></button></div><ul class="collapse pl-0" id="collapse-id-'.$item->ID.'">' : '';
 		$item_output .= $args->after;
 		$output .= apply_filters ( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 }
@@ -97,7 +97,7 @@ class Blog_Sidebar_Walker_Nav_Menu extends Walker_Nav_Menu {
 	function start_lvl( &$output, $depth = 0, $args = array() ){ //ul
 		$indent = str_repeat("\t",$depth);
 		$submenu = ($depth > 0) ? ' dropdown-submenu' : '';
-		$output .= "\n$indent<ul class=\"text-right text-lg-left bg-white rounded-0 px-3 py-lg-0 px-lg-0 dropdown-menu$submenu depth_$depth\">\n";
+		$output .= "\n$indent<ul class=\"text-right text-lg-left bg-white px-3 py-lg-0 px-lg-0 dropdown-menu$submenu depth_$depth\">\n";
 	}
 	
 //  START ELEMENT   
@@ -132,11 +132,11 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ){
 		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr($item->url) . '"' : '';
 		
         if ( $depth == 0 ){
-		$attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-secondary text-uppercase py-1 px-3 mx-2 border" data-toggle="dropdown"' : ' class="nav-link text-secondary text-uppercase px-3 mx-2 border "'; 
+		$attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-primary text-uppercase py-1 px-3 mx-2 border" data-toggle="dropdown"' : ' class="nav-link text-primary text-uppercase px-3 mx-2 border "'; 
         }
         else {
-//        $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-secondary w-100 d-flex justify-content-between" data-toggle="dropdown"' : ' class="nav-link text-secondary"'; 
-        $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-secondary w-100 d-inline-block d-lg-flex justify-content-between"' : ' class="nav-link text-secondary"'; 
+//        $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-primary w-100 d-flex justify-content-between" data-toggle="dropdown"' : ' class="nav-link text-primary"'; 
+        $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-primary w-100 d-inline-block d-lg-flex justify-content-between"' : ' class="nav-link text-primary"'; 
         }
 		$item_output = $args->before;
 		$item_output .= '<a ' . $attributes . ' itemprop="url">';

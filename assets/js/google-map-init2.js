@@ -1,5 +1,5 @@
 var map;
-function tml_run_map(){   
+function tath_run_map(){   
 var location = new google.maps.LatLng( TmlMapObj.lat, TmlMapObj.lng );
 var map_options = {
     zoom: +TmlMapObj.zoom-1,
@@ -8,7 +8,7 @@ var map_options = {
     disableDefaultUI: TmlMapObj.disablecontrols,
     mapTypeId: google.maps.MapTypeId.ROADMAP
 }
-map = new google.maps.Map(document.getElementById('tml-google-map1'), map_options);
+map = new google.maps.Map(document.getElementById('tath-google-map1'), map_options);
 
 var marker1location = new google.maps.LatLng( TmlMapObj.marker1lat, TmlMapObj.marker1lng );
 var marker1 = new google.maps.Marker({
@@ -24,4 +24,4 @@ map: map
 //map: map
 //});
 }
-tml_run_map();
+tath_run_map();

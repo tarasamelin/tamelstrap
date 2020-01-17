@@ -2,10 +2,7 @@
 /*
 * Template part for displaying content
 */
-
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 ?> 
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -16,6 +13,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 			the_content();
-echo do_shortcode('[socialshare]');
 		?>
 </article><!-- #post-## -->

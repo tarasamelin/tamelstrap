@@ -6,7 +6,7 @@
 [contact-form email="" subject="" label_name="" label_email="" label_phone="" label_subject="" label_message="" label_submit="" error_empty="" error_noemail="" success=""]
 */
 // function to get the IP address of the user
-function tml_get_the_ip() {
+function tath_get_the_ip() {
 	if (isset($_SERVER["HTTP_X_FORWARDED_FOR"])) {
 		return $_SERVER["HTTP_X_FORWARDED_FOR"];
 	}
@@ -19,19 +19,19 @@ function tml_get_the_ip() {
 }
 
 // Add the shortcode
-add_shortcode( 'contact-form', 'tml_contact_form_sc' );
-function tml_contact_form_sc( $atts ) {
+add_shortcode( 'contact-form', 'tath_contact_form_sc' );
+function tath_contact_form_sc( $atts ) {
 	extract( shortcode_atts( array(
 		"email" => get_bloginfo( 'admin_email' ),
-		"subject" => __( 'the letter was sent via the contact form', 'tamelstrap' ),
+		"subject" => __( 'the letter was sent via the contact form', 'tath' ),
 		"label_name" => __( 'Name' ),
 		"label_email" => __( 'Email' ),
-		"label_phone" => __( 'Telephone', 'tamelstrap' ),
-		"label_message" => __( 'Message', 'tamelstrap' ),
-		"label_submit" => __( 'Send', 'tamelstrap' ),
+		"label_phone" => __( 'Telephone', 'tath' ),
+		"label_message" => __( 'Message', 'tath' ),
+		"label_submit" => __( 'Send', 'tath' ),
 		"error_empty" => __( '<strong>ERROR</strong>: please fill the required fields (name, email).' ),
 		"error_noemail" => __( 'Please enter a valid email address.' ),
-		"success" => __( '<span class="text-success h3">Thank you for your message! We will contact you shortly.</span>', 'tamelstrap' ),
+		"success" => __( '<span class="text-success h3">Thank you for your message! We will contact you shortly.</span>', 'tath' ),
 	), $atts ) );
 
 	if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
@@ -60,7 +60,7 @@ function tml_contact_form_sc( $atts ) {
 
 		if ( $error == false ) {
 			$email_subject = "[" . get_bloginfo('name') . "] " . $subject ;
-			$email_message = "IP: " . tml_get_the_ip(). "\n\n";
+			$email_message = "IP: " . tath_get_the_ip(). "\n\n";
 			$email_message .= "Subject: " . $form_data['subject'] . "\n\n";
 			$email_message .= "Name: " .$form_data['your_name'] . "\n\n";
 			$email_message .= "E-mail: " .$form_data['email'] . "\n\n";
@@ -80,23 +80,23 @@ function tml_contact_form_sc( $atts ) {
 	}
 	$email_form = '<form class="contact-form" method="post" action="'.get_permalink().'">
 		<div class="form-group mb-2">
-			<label class="text-secondary mb-0" for="cf_name">'.$label_name.':</label>
-			<input class="form-control rounded-0" id="cf_name" name="your_name" type="text" size="50" maxlength="50" value="'.$form_data['your_name'].'" />
+			<label class="text-primary mb-0" for="cf_name">'.$label_name.':</label>
+			<input class="form-control" id="cf_name" name="your_name" type="text" size="50" maxlength="50" value="'.$form_data['your_name'].'" />
 		</div>
 		<div class="form-group mb-2">
-			<label class="text-secondary mb-0" for="cf_email">'.$label_email.':</label>
-			<input class="form-control rounded-0" id="cf_email" name="email" type="text" size="50" maxlength="50" value="'.$form_data['email'].'" />
+			<label class="text-primary mb-0" for="cf_email">'.$label_email.':</label>
+			<input class="form-control" id="cf_email" name="email" type="text" size="50" maxlength="50" value="'.$form_data['email'].'" />
 		</div>
         <div class="form-group mb-2">
-			<label class="text-secondary mb-0" for="cf_email">'.$label_phone.':</label>
-			<input class="form-control rounded-0" id="cf_email" name="phone" type="text" size="50" maxlength="50" value="'.$form_data['phone'].'" />
+			<label class="text-primary mb-0" for="cf_email">'.$label_phone.':</label>
+			<input class="form-control" id="cf_email" name="phone" type="text" size="50" maxlength="50" value="'.$form_data['phone'].'" />
 		</div>
 		<div class="form-group mb-2">
-			<label class="text-secondary mb-0" for="cf_message">'.$label_message.':</label>
-			<textarea class="form-control rounded-0" id="cf_message" name="message" cols="50" rows="3">'.$form_data['message'].'</textarea>
+			<label class="text-primary mb-0" for="cf_message">'.$label_message.':</label>
+			<textarea class="form-control" id="cf_message" name="message" cols="50" rows="3">'.$form_data['message'].'</textarea>
 		</div>
 		<div class="form-group mb-3">
-			<input class="pt-1 pb-1 btn btn-outline-secondary rounded-0" id="cf_send" type="submit" value="'.$label_submit.'" name="send" />
+			<input class="pt-1 pb-1 btn btn-outline-primary" id="cf_send" type="submit" value="'.$label_submit.'" name="send" />
 		</div>
 	</form>';
 	

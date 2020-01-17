@@ -7,6 +7,8 @@
 
 get_header(); ?>
 
+<?php get_template_part( 'template-parts/slider-standart' ); ?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -47,8 +49,8 @@ get_header(); ?>
 
                 echo '<div class="mb-2 p-0 col-sm-6 col-md-4 product-category">';
                 echo '<a href="' . esc_url( $term_link ) . '"  class="d-block m-1 mx-4" >';
-                if( $img_thumb_src ){ echo '<img class="border rounded-0 img-fluid w-100" src="'.$img_thumb_src.'" alt="' . $term->name . '" width="390" height="390" />'; }
-				else { echo '<img class="border rounded-0 img-fluid w-100" src="' .wc_placeholder_img_src(). '" alt="' . $term->name . '" width="390" height="390" />'; }
+                if( $img_thumb_src ){ echo '<img class="border img-fluid w-100" src="'.$img_thumb_src.'" alt="' . $term->name . '" width="390" height="390" />'; }
+				else { echo '<img class="border img-fluid w-100" src="' .wc_placeholder_img_src(). '" alt="' . $term->name . '" width="390" height="390" />'; }
                 echo '<h3 class="h4 mt-1 text-center mb-0">' . $term->name . '</h3></a>';
                 echo '</div>';
 
@@ -64,7 +66,7 @@ get_header(); ?>
 <div class="home-featured-level py-4">
     <div class="container-fluid">
             
-    <div class="row p-1 pt-1 ml-0 mr-0 featured-products">
+    <div class="row p-1 pt-1 ml-0 mr-0 products featured-products">
 <!--        <h2 class="text-success text-center h3 py-2 my-3 border border-left-0 border-right-0 col-12"><?php esc_html_e( 'Featured products', 'woocommerce' ); ?>:</h2>-->
             <?php
             $args = array(

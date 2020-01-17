@@ -1,5 +1,5 @@
 var map;
-function tml_run_map(){   
+function tath_run_map(){   
 var location = new google.maps.LatLng( TmlMapObj.lat, TmlMapObj.lng );
 var map_options = {
     zoom: +TmlMapObj.zoom-1,
@@ -8,7 +8,7 @@ var map_options = {
     disableDefaultUI: TmlMapObj.disablecontrols,
     mapTypeId: google.maps.MapTypeId.ROADMAP
 }
-map = new google.maps.Map(document.getElementById('tml-google-map1'), map_options);
+map = new google.maps.Map(document.getElementById('tath-google-map1'), map_options);
 
 var marker1location = new google.maps.LatLng( TmlMapObj.marker1lat, TmlMapObj.marker1lng );
 var marker1 = new google.maps.Marker({
@@ -24,10 +24,10 @@ map: map
 //map: map
 //});
 }
-tml_run_map();
+tath_run_map();
 
 var map2;
-function tml_run_map2(){   
+function tath_run_map2(){   
 var location2 = new google.maps.LatLng( TmlMapObj2.lat, TmlMapObj2.lng );
 var map_options2 = {
     zoom: +TmlMapObj2.zoom-1,
@@ -36,7 +36,7 @@ var map_options2 = {
     disableDefaultUI: TmlMapObj2.disablecontrols,
     mapTypeId: google.maps.MapTypeId.ROADMAP
 }
-map2 = new google.maps.Map(document.getElementById('tml-google-map2'), map_options2);
+map2 = new google.maps.Map(document.getElementById('tath-google-map2'), map_options2);
 
 var marker1location2 = new google.maps.LatLng( TmlMapObj2.marker1lat, TmlMapObj2.marker1lng );
 var marker12 = new google.maps.Marker({
@@ -46,4 +46,4 @@ map: map2
 });
 
 }
-tml_run_map2();
+tath_run_map2();

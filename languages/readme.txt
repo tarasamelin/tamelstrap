@@ -7,14 +7,14 @@ https://developer.wordpress.org/themes/functionality/localization/
 https://developer.wordpress.org/reference/functions/load_theme_textdomain/
 
 
-__( 'bla bla bla', 'tamelstrap' ),
+__( 'bla bla bla', 'tath' ),
 
 /**
  *
  * Load Theme Textdomain (Localize theme)
  *
  */
-function tml_localize_theme(){
-	load_theme_textdomain( 'tamelstrap', get_template_directory() . '/languages' );
+function tath_localize_theme(){
+	load_theme_textdomain( 'tath', get_template_directory() . '/languages' );
 }
-add_action( 'after_setup_theme', 'tml_localize_theme' );
+add_action( 'after_setup_theme', 'tath_localize_theme' );

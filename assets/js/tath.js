@@ -1,11 +1,12 @@
 jQuery( function($) {
+
 // Fix BootStrap DropDown Menu
-$( 'header .navbar .dropdown' ).hover(function() {
+$( 'header .navbar .dropdown' ).hover( function() {
     $( this ).find( '.dropdown-menu' ).first().stop(true, true).delay(50).slideDown();
 }, 
 function() {
     $( this ).find( '.dropdown-menu' ).first().stop(true, true).delay(50).slideUp();
-});
+} );
     
 $( 'header .navbar .dropdown > a' ).click(function(){
     var scr_w = $(window).width();
@@ -13,6 +14,7 @@ $( 'header .navbar .dropdown > a' ).click(function(){
         location.href = this.href;
     }
 });
+
 // Sticky nav menu
 $( window ).scroll(function() {
     var scr_w = $(window).width();
@@ -37,14 +39,16 @@ $( window ).scroll(function() {
         $( 'a.totopbtn' ).addClass( 'd-none' );
         $( '#content' ).removeClass( 'mt84px' );
     }
-});    
+});
+
 $( 'a.totopbtn' ).click(function() {
   $('html, body' ).animate({ scrollTop: 0 }, 'slow');
 });
+
 // woocommerce MyAccount navigation
 $( '.woocommerce-MyAccount-navigation .is-active a' ).addClass( 'active' );
-$( '.woocommerce-edit-address .form-group input' ).addClass( 'form-control rounded-0' );
-$( '.woocommerce-edit-address .form-group select' ).addClass( 'form-control rounded-0' );
+$( '.woocommerce-edit-address .form-group input' ).addClass( 'form-control' );
+$( '.woocommerce-edit-address .form-group select' ).addClass( 'form-control' );
 
  $( '#secondary .current-menu-parent ul' ).addClass('show');
 

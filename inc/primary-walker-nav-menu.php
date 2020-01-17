@@ -4,7 +4,7 @@ class Primary_Walker_Nav_Menu extends Walker_Nav_Menu {
 	function start_lvl( &$output, $depth = 0, $args = array() ){ //ul
 		$indent = str_repeat("\t",$depth);
 		$submenu = ($depth > 0) ? ' dropdown-submenu' : '';
-		$output .= "\n$indent<ul class=\"text-right text-lg-left bg-white rounded-0 px-3 py-lg-0 px-lg-0 dropdown-menu$submenu depth_$depth\">\n";
+		$output .= "\n$indent<ul class=\"text-right text-lg-left bg-white px-3 py-lg-0 px-lg-0 dropdown-menu$submenu depth_$depth\">\n";
 	}
 	
 //  START ELEMENT   
@@ -39,11 +39,11 @@ function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ){
 		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr($item->url) . '"' : '';
 		
         if ( $depth == 0 ){
-		$attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-secondary" data-toggle="dropdown"' : ' class="nav-link text-secondary"'; 
+		$attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-primary" data-toggle="dropdown"' : ' class="nav-link text-primary"'; 
         }
         else {
-//        $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-secondary w-100 d-flex justify-content-between" data-toggle="dropdown"' : ' class="nav-link text-secondary"'; 
-        $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-secondary w-100 d-inline-block d-lg-flex justify-content-between"' : ' class="nav-link text-secondary"'; 
+//        $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-primary w-100 d-flex justify-content-between" data-toggle="dropdown"' : ' class="nav-link text-primary"'; 
+        $attributes .= ( $args->walker->has_children ) ? ' class="dropdown-toggle nav-link text-primary w-100 d-inline-block d-lg-flex justify-content-between"' : ' class="nav-link text-primary"'; 
         }
 		$item_output = $args->before;
 		$item_output .= '<a ' . $attributes . ' itemprop="url">';

@@ -4,9 +4,9 @@
  * google map js api 111111111111111111111111111111111111111
 **/
 
-add_shortcode( 'map2', 'tml_map2' );
-function tml_map2($atts2){
-    global $tml_map_array2;
+add_shortcode( 'map2', 'tath_map2' );
+function tath_map2($atts2){
+    global $tath_map_array2;
 	$atts2 = shortcode_atts(
 		array(
 			'lat' => '49.8277655',
@@ -24,7 +24,7 @@ function tml_map2($atts2){
 			'key' => '111111111111111111111111111111111111111'
 		), $atts2 );
     extract( $atts2 );
-    $tml_map_array2 = array(
+    $tath_map_array2 = array(
         'lat' => $lat,
         'lng' => $lng,
         
@@ -40,19 +40,19 @@ function tml_map2($atts2){
         'key' => $key
     );
     
-add_action( 'wp_footer', 'tml_map_styles_scripts2' );
+add_action( 'wp_footer', 'tath_map_styles_scripts2' );
     ob_start(); ?>
-       <div id="tml-google-map2" class="border" style="width:100%; height: 400px;"></div>
+       <div id="tath-google-map2" class="border" style="width:100%; height: 400px;"></div>
     <?php
     wp_print_scripts('google-map-init-js2');
     return ob_get_clean();
 }
 
-function tml_map_styles_scripts2(){
-    global $tml_map_array2;
-    wp_register_script( 'google-map-api-js2', 'https://maps.google.com/maps/api/js?&callback=initMap&key='.sanitize_text_field($tml_map_array2['key']), array('tml'), NULL, true );
+function tath_map_styles_scripts2(){
+    global $tath_map_array2;
+    wp_register_script( 'google-map-api-js2', 'https://maps.google.com/maps/api/js?&callback=initMap&key='.sanitize_text_field($tath_map_array2['key']), array('tml'), NULL, true );
     wp_register_script( 'google-map-init-js2', get_template_directory_uri().'/assets/js/google-map-init2.js', array('google-map-api-js2'), NULL, true );
     wp_enqueue_script( 'google-map-api-js2');
     wp_enqueue_script( 'google-map-init-js2');
-    wp_localize_script( 'google-map-init-js2', 'TmlMapObj2', $tml_map_array2 );
+    wp_localize_script( 'google-map-init-js2', 'TmlMapObj2', $tath_map_array2 );
 }

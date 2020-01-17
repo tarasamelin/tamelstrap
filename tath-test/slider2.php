@@ -3,16 +3,14 @@
 * Template part for displaying Slider
 */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 ?>
 
 
-<?php $slider = new WP_Query( ['post_type' => 'tml-slide'] );?>
+<?php $slider = new WP_Query( ['post_type' => 'tath-slide'] );?>
 <?php if( $slider->have_posts() && is_front_page() ) : ?>
 
-<div id="carouselExampleControls" class="mb-3 border border-top-0 border-left-0 border-right-0 carousel slide" data-ride="carousel">
+<div id="carouselExampleControls" class="d-none d-md-block carousel slide" data-ride="carousel" data-interval="10000">
   <div class="carousel-inner">
 
     <?php while( $slider->have_posts() ) : $slider->the_post(); ?>
@@ -20,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         <?php
         $thumb = get_post_thumbnail_id();
         $img_url = wp_get_attachment_url( $thumb,'full' );
-        $image = aq_resize( $img_url, 1500, 400, true,true,true );
+        $image = aq_resize( $img_url, 1500, 500, true,true,true );
         ++$i
         ?>
 
@@ -35,13 +33,6 @@ if ( ! defined( 'ABSPATH' ) ) {
                 <?php $slide_link = get_post_custom();
                 if( isset($slide_link['SLIDE_LINK']) ){ echo '<a href="'.$slide_link['SLIDE_LINK'][0].'">'; }?>
                     <img class="d-block w-100" src="<?php echo $image ?>" alt="<?php the_title(); ?>">
-                
-                    <div class="carousel-caption">
-                        <h3 class="text-white"><?php the_title(); ?></h3>
-                        <div class="mx-5 d-none d-sm-block">
-                        <?php the_content(); ?>
-                        </div>
-                    </div>
                 
                 <?php if( isset($slide_link['SLIDE_LINK']) ){ echo '</a>'; }?>
             </div>

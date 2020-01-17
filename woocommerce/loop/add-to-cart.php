@@ -12,9 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
+if($product->get_stock_status() == 'instock'){
 echo apply_filters( 'woocommerce_loop_add_to_cart_link',
 	sprintf( '<div class="clearfix"></div>
-            <a href="%s" data-quantity="%s"class="%s btn btn-outline-secondary mx-auto d-table rounded-0 pt-1 pb-1 mt-1" %s>%s</a>',
+            <a href="%s" data-quantity="%s"class="%s btn btn-outline-primary text-capitalize mx-auto d-table rounded-0 pt-1 pb-1 mt-1" %s>%s</a>',
 		esc_url( $product->add_to_cart_url() ),
 		esc_attr( isset( $args['quantity'] ) ? $args['quantity'] : 1 ),
 		esc_attr( isset( $args['class'] ) ? $args['class'] : 'button' ),
@@ -22,3 +23,9 @@ echo apply_filters( 'woocommerce_loop_add_to_cart_link',
 		esc_html( $product->add_to_cart_text() )
 	),
 $product, $args );
+}
+else {
+echo apply_filters( 'woocommerce_loop_add_to_cart_link',
+	sprintf( '<div class="clearfix text-center text-danger mt-2">%s</div>',  __( 'Out of stock', 'woocommerce' ) ),
+$product, $args );
+}
