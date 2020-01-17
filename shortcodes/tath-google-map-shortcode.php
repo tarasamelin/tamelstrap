@@ -17,7 +17,7 @@ function tath_map($atts){
 			'zoom' => 16,
 			'enablescrollwheel' => false,
 			'disablecontrols' => false,
-			'key' => 'AIzaSyC1d-FtX6E4pTcAvS-gkrIpyIFiqZa2Eoc'
+			'key' => '11111111111111111111111111111111111111111'
 		), $atts );
     extract( $atts );
     $tath_map_array = array(
